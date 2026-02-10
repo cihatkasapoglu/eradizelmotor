@@ -3,274 +3,618 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyundai Era Dizel Motor - Komple & Yarım Sandık Motor | Ankara Cihat Hyundai</title>
-    <meta name="description" content="Hyundai Accent Era 1.5 dizel rektifiyeli ve çıkma motor satışı. Ankara'da montaj, 81 ile kargo imkanı. Komple, yarım motor ve silindir kapağı seçenekleri. Stoktan hemen teslim.">
-    <meta name="keywords" content="era dizel motor, hyundai era motor, accent era motor, 1.5 crdi motor, ankara çıkma motor, revizyonlu motor, üsten dolu motor">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hyundai Accent Era 1.5 Dizel Motor | Sandık & Çıkma Motor Ankara | Era Dizel Motor</title>
+    <meta name="description" content="Hyundai Accent Era 1.5 VGT Dizel komple, yarım ve silindir kapak motor satışı. Ankara'dan 81 ile kargo. Piyasada sıfır diye satılanlara aldanmayın, garantili revizyonlu motorun adresi.">
+    <meta name="keywords" content="hyundai era dizel motor, accent era motor, era 1.5 vgt motor, hyundai çıkma motor, ankara era motor, sandık motor era, hyundai motor rektifiye, 1.5 crdi motor fiyatları">
+    <meta name="author" content="Cihat Hyundai">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="TR-06">
+    <meta name="geo.placename" content="Ankara">
+    <meta name="geo.position" content="39.9708;32.7462">
+    <meta name="ICBM" content="39.9708, 32.7462">
+
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "AutoPartsStore",
-      "name": "Cihat Hyundai - Era Dizel Motor",
+      "name": "Era Dizel Motor - Cihat Hyundai",
       "image": "https://eradizelmotor.com.tr/logo.png",
-      "description": "Hyundai Accent Era 1.5 Dizel çıkma ve revizyonlu motor satışı.",
+      "@id": "https://eradizelmotor.com.tr",
+      "url": "https://eradizelmotor.com.tr",
+      "telephone": "+905537383806",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Serhat Mah. 1126. Cad. No: 14",
-        "addressLocality": "Yenimahalle",
-        "addressRegion": "Ankara",
+        "streetAddress": "Serhat Mah. 1126. Cad. No: 14 Yenimahalle",
+        "addressLocality": "Ankara",
         "postalCode": "06374",
         "addressCountry": "TR"
       },
-      "telephone": "+905537383806",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.9708,
+        "longitude": 32.7462
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
         ],
         "opens": "08:30",
         "closes": "19:00"
       },
-      "url": "https://eradizelmotor.com.tr"
+      "sameAs": [
+        "https://www.facebook.com/cihathyundai",
+        "https://instagram.com/cihathyundai",
+        "https://www.tiktok.com/@cihathyundai",
+        "https://cihathyundai.sahibinden.com",
+        "https://cihathyundai.otocikma.com"
+      ],
+      "priceRange": "₺₺₺"
     }
     </script>
 
     <style>
+        /* GENEL CSS AYARLARI */
         :root {
-            --primary-color: #002c5f; /* Hyundai Mavisi Tonu */
-            --secondary-color: #e31b23; /* Dikkat çekici kırmızı */
-            --whatsapp-color: #25D366;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .alert-custom {
-            background-color: #fff3cd;
-            border-left: 5px solid var(--secondary-color);
-            color: #856404;
-            padding: 20px;
-            margin: 20px 0;
-            font-weight: bold;
+            --primary-blue: #002c5f; /* Hyundai Mavisi Tonu */
+            --accent-silver: #c4c4c4;
+            --alert-red: #d32f2f;
+            --whatsapp-green: #25D366;
+            --dark-bg: #1a1a1a;
+            --text-color: #333;
         }
 
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-            margin-bottom: 20px;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            padding-bottom: 60px; /* Mobil buton için boşluk */
         }
-        .card-header-custom {
-            background-color: var(--primary-color);
+
+        h1, h2, h3, h4 {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        .section-padding { padding: 60px 0; }
+
+        /* HEADER & TOP BAR */
+        .top-bar {
+            background-color: var(--dark-bg);
             color: white;
-            padding: 15px;
-            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
         }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .store-links a {
+            margin-right: 15px;
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+        .store-links a:hover { text-decoration: underline; }
         
-        .btn-call { background-color: var(--primary-color); color: white; }
-        .btn-call:hover { background-color: #001f44; color: white; }
-        
-        .btn-whatsapp-fixed {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--whatsapp-color);
-            color: white;
-            border-radius: 50px;
-            padding: 15px 25px;
-            font-size: 18px;
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
             z-index: 1000;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            text-decoration: none;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo {
+            font-size: 24px;
+            color: var(--primary-blue);
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+        .logo span { color: var(--alert-red); }
+        
+        .nav-contacts {
+            display: flex;
+            gap: 20px;
+        }
+        .phone-box {
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-        .btn-whatsapp-fixed:hover { color: white; background-color: #1ebc57; }
-
-        .store-links a {
-            text-decoration: none;
-            color: #333;
             font-weight: bold;
-            display: block;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            background: #f8f9fa;
+            font-size: 1.1rem;
         }
-        .store-links a:hover { background: #e9ecef; }
-        
-        .seo-cities {
-            font-size: 0.8rem;
-            color: #777;
+        .phone-box i { color: var(--primary-blue); font-size: 1.3rem; }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(0,44,95,0.8), rgba(0,44,95,0.8)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
             text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            background: #f1f1f1;
+            padding: 100px 0;
+            position: relative;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.5rem; margin-bottom: 30px; font-weight: 300; }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary { background: var(--alert-red); color: white; }
+        .btn-primary:hover { background: #b71c1c; transform: translateY(-3px); }
+        .btn-whatsapp { background: var(--whatsapp-green); color: white; }
+        .btn-whatsapp:hover { background: #128c7e; transform: translateY(-3px); }
+
+        /* ALERT BOX (SIFIR MOTOR GERÇEĞİ) */
+        .truth-alert {
+            background: #fff3cd;
+            border-left: 10px solid var(--alert-red);
+            padding: 30px;
+            margin: -40px auto 40px;
+            max-width: 1000px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .truth-alert h3 { color: var(--alert-red); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .truth-alert p { font-size: 1.1rem; color: #664d03; }
+
+        /* ÜRÜNLER */
+        .products h2 { text-align: center; font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 50px; }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .p-img {
+            height: 250px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 3rem;
+        }
+        .p-content { padding: 25px; }
+        .p-title { font-size: 1.4rem; margin-bottom: 10px; color: var(--primary-blue); }
+        .p-desc { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+        .stock-status {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .p-actions { display: flex; gap: 10px; }
+        .btn-call { flex: 1; background: var(--primary-blue); color: white; text-align: center; padding: 10px; border-radius: 5px; }
+        .btn-wp-sm { flex: 1; background: var(--whatsapp-green); color: white; text-align: center; padding: 10px; border-radius: 5px; }
+
+        /* HİZMETLER */
+        .services { background: white; }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        .service-box i { font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px; }
+        .service-box h3 { margin-bottom: 15px; }
+
+        /* SEO METİN ALANI */
+        .seo-text-area {
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .seo-content h3 { color: #333; margin-top: 20px; margin-bottom: 10px; }
+
+        /* İL LİSTESİ (SEO İÇİN GİZLİ GÜÇ) */
+        .cities-section {
+            background: #fff;
+            padding: 30px 0;
+            border-top: 1px solid #eee;
+        }
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            font-size: 0.8rem;
+        }
+        .cities-grid a { color: #777; }
+        .cities-grid a:hover { color: var(--primary-blue); text-decoration: underline; }
+
+        /* FOOTER */
+        footer { background: var(--dark-bg); color: #ccc; padding: 60px 0 20px; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer h3 { color: white; margin-bottom: 20px; border-bottom: 2px solid var(--primary-blue); display: inline-block; padding-bottom: 5px; }
+        .footer-social a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .footer-social a:hover { background: var(--primary-blue); }
+        .contact-list li { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; }
+        
+        /* STICKY WHATSAPP & CALL BUTTONS (MOBILE) */
+        .mobile-sticky {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .mobile-sticky a {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1500;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-contacts { display: none; } /* Mobilde üst barı sadeleştir */
+            .service-grid { grid-template-columns: 1fr; }
+            .mobile-sticky { display: flex; }
+            .whatsapp-float { bottom: 70px; right: 15px; }
+            .truth-alert { margin: 20px; }
+            footer { padding-bottom: 80px; }
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-dark bg-dark sticky-top">
+    <div class="top-bar">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-cogs text-warning"></i> EraDizelMotor.com.tr
-            </a>
-            <div class="d-flex gap-2">
-                <a href="tel:05537383806" class="btn btn-outline-light btn-sm"><i class="fas fa-phone"></i> 0553 738 38 06</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hero-section">
-        <div class="container">
-            <h1 class="display-4 fw-bold">HYUNDAI ACCENT ERA<br>1.5 CRDi DİZEL MOTOR</h1>
-            <p class="lead mt-3">Türkiye'nin En Kapsamlı Hyundai Era Motor Yenileme ve Satış Merkezi</p>
-            <p class="fs-5"><i class="fas fa-wrench"></i> Garantili Revizyon | <i class="fas fa-truck"></i> 81 İle Kargo | <i class="fas fa-map-marker-alt"></i> Ankara Montaj</p>
-            
-            <div class="mt-4">
-                <a href="tel:05537383806" class="btn btn-lg btn-danger me-2"><i class="fas fa-phone"></i> Hemen Ara</a>
-                <a href="https://wa.me/905537383806?text=Era%20dizel%20motor%20hakkında%20bilgi%20almak%20istiyorum" class="btn btn-lg btn-success"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            </div>
-        </div>
-    </header>
-
-    <div class="container mt-5">
-        <div class="alert-custom shadow">
-            <h3><i class="fas fa-exclamation-triangle"></i> ÖNEMLİ BİLGİLENDİRME</h3>
-            <p class="mb-0">Sayın Müşterilerimiz; Hyundai Era araçlar için <strong>fabrikasyon "SIFIR SANDIK MOTOR" üretimi yoktur.</strong> Piyasada "Sıfır" diye satılan motorlar aslında rektefiyeli (yenilenmiş) motorlardır. Biz, dürüst ticaret ilkesiyle sizlere <strong>A'dan Z'ye revizyonu yapılmış, garantili ve test edilmiş</strong> motorlar sunuyoruz.</p>
-        </div>
-
-        <div class="row text-center my-5">
-            <div class="col-md-6">
-                <a href="https://cihathyundai.sahibinden.com" target="_blank" class="btn btn-warning w-100 p-3 fw-bold mb-2">
-                    <i class="fas fa-store"></i> sahibinden.com MAĞAZAMIZ
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="https://cihathyundai.otocikma.com" target="_blank" class="btn btn-secondary w-100 p-3 fw-bold mb-2">
-                    <i class="fas fa-car-crash"></i> otocikma.com MAĞAZAMIZ
-                </a>
-            </div>
-        </div>
-
-        <h2 class="text-center mb-4" style="color: var(--primary-color);">MOTOR SEÇENEKLERİMİZ</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="product-card shadow-sm h-100">
-                    <div class="card-header-custom">
-                        <h4>KOMPLE DOLU MOTOR</h4>
-                    </div>
-                    <div class="p-3">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Enjektör & Turbo Dahil Seçenekler</li>
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Rektifiyeli & Garantili</li>
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Marşa Basmaya Hazır</li>
-                        </ul>
-                        <a href="tel:05348441861" class="btn btn-call w-100 mt-3">Fiyat Al: 0534 844 18 61</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="product-card shadow-sm h-100">
-                    <div class="card-header-custom">
-                        <h4>YARIM (BLOK) MOTOR</h4>
-                    </div>
-                    <div class="p-3">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Alt Blok + Piston + Kol + Krank</li>
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Orijinal Çıkma veya Revizyonlu</li>
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Standart Ölçülerde</li>
-                        </ul>
-                        <a href="tel:05537383806" class="btn btn-call w-100 mt-3">Fiyat Al: 0553 738 38 06</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="product-card shadow-sm h-100">
-                    <div class="card-header-custom">
-                        <h4>SİLİNDİR KAPAĞI</h4>
-                    </div>
-                    <div class="p-3">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Dolu veya Boş Kapak</li>
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Çatlak & Sızdırmazlık Testi Yapılmış</li>
-                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Orijinal Hyundai</li>
-                        </ul>
-                        <a href="tel:05537383806" class="btn btn-call w-100 mt-3">Fiyat Al: 0553 738 38 06</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5 p-4 bg-light rounded">
-            <div class="col-md-4 text-center mb-3">
-                <i class="fas fa-shipping-fast fa-3x text-primary mb-2"></i>
-                <h5>81 İle Kargo</h5>
-                <p>Türkiye'nin her yerine anlaşmalı kargo ile gönderim yapıyoruz. Aynı gün kargoya teslim.</p>
-            </div>
-            <div class="col-md-4 text-center mb-3">
-                <i class="fas fa-tools fa-3x text-primary mb-2"></i>
-                <h5>Ankara İçi Anahtar Teslim</h5>
-                <p>Aracınızı servisimize getirin, motorunuzu garantili bir şekilde montajlayıp teslim edelim.</p>
-            </div>
-            <div class="col-md-4 text-center mb-3">
-                <i class="fas fa-truck-pickup fa-3x text-primary mb-2"></i>
-                <h5>Çekici Desteği</h5>
-                <p>Aracınızın Ankara'ya getirilmesi konusunda uygun fiyatlı çekici yönlendirmesi ve yardımcı olma hizmeti.</p>
+            <span>Türkiye'nin En Kapsamlı Hyundai Era Motor Merkezi</span>
+            <div class="store-links">
+                <a href="https://cihathyundai.sahibinden.com" target="_blank"><i class="fas fa-store"></i> Sahibinden Mağazamız</a>
+                <a href="https://cihathyundai.otocikma.com" target="_blank"><i class="fas fa-car-crash"></i> OtoÇıkma Mağazamız</a>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-white mt-5 pt-5 pb-3">
+    <header>
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <h5>Cihat Hyundai - İletişim</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> Serhat Mah. 1126. Cad. No: 14 Yenimahalle/ANKARA</p>
-                    <p><a href="tel:05537383806" class="text-white text-decoration-none"><i class="fas fa-phone-alt"></i> 0553 738 38 06</a></p>
-                    <p><a href="tel:05348441861" class="text-white text-decoration-none"><i class="fas fa-phone-alt"></i> 0534 844 18 61</a></p>
-                    <div class="social-icons mt-3">
-                        <a href="https://instagram.com/cihathyundai" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/cihathyundai" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.tiktok.com/@cihathyundai" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-tiktok"></i></a>
+            <div class="navbar">
+                <a href="/" class="logo">ERA<span>DIZEL</span>MOTOR</a>
+                <div class="nav-contacts">
+                    <div class="phone-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <small style="display:block; font-size:0.7rem; color:#666;">7/24 Destek</small>
+                            0553 738 38 06
+                        </div>
+                    </div>
+                    <div class="phone-box">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <small style="display:block; font-size:0.7rem; color:#666;">Yedek Hat</small>
+                            0534 844 18 61
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h5>Konum</h5>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.5!2d32.7!3d39.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU4JzIyLjMiTiAzMsKwNDYnMzAuNCJF!5e0!3m2!1str!2str!4v1600000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    <small class="text-muted">*Konum temsilidir, lütfen gelmeden arayınız.</small>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>HYUNDAI ACCENT ERA<br>1.5 CRDi DİZEL MOTOR</h1>
+            <p>Ankara'dan 81 İle Garantili Gönderim | Anahtar Teslim Montaj</p>
+            <div style="margin-top: 30px;">
+                <a href="tel:05537383806" class="btn btn-primary"><i class="fas fa-phone"></i> HEMEN ARA</a>
+                <a href="https://wa.me/905537383806?text=Era%20motor%20hakkında%20bilgi%20almak%20istiyorum" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="truth-alert">
+            <h3><i class="fas fa-exclamation-triangle"></i> DİKKAT: SIFIR SANDIK MOTOR GERÇEĞİ</h3>
+            <p>Değerli müşterilerimiz; Hyundai Accent Era 1.5 dizel araçlar için fabrikasyon "Sıfır Sandık Motor" üretimi bitmiştir. Piyasada "Sıfır" adı altında satılan motorların tamamı <strong>rektifiye edilmiş (revizyonlu)</strong> motorlardır. Biz, şeffaf ticaret ilkesi gereği size ne sattığımızı açıkça belirtiyoruz: Ürünlerimiz orjinal çıkma veya A kalite revizyonlu motorlardır.</p>
+        </div>
+    </div>
+
+    <section class="section-padding products">
+        <div class="container">
+            <h2>STOKLARIMIZDAKİ MOTOR SEÇENEKLERİ</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div class="p-img"><i class="fas fa-engine"></i></div>
+                    <div class="p-content">
+                        <div class="stock-status">STOKTA VAR</div>
+                        <h3 class="p-title">Era 1.5 VGT Komple Motor</h3>
+                        <p class="p-desc">Enjektör, turbo, pompa dahil komple dolu motor. İster revizyonlu ister çıkma seçenekleriyle. Ankara içi montaj imkanı.</p>
+                        <div class="p-actions">
+                            <a href="tel:05537383806" class="btn-call">Fiyat Sor</a>
+                            <a href="https://wa.me/905537383806?text=Komple%20motor%20fiyatı%20nedir?" class="btn-wp-sm"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="p-img"><i class="fas fa-cogs"></i></div>
+                    <div class="p-content">
+                        <div class="stock-status">STOKTA VAR</div>
+                        <h3 class="p-title">Era 1.5 Yarım Motor (Short Block)</h3>
+                        <p class="p-desc">Blok, krank, piston, kol yatak grubu toplanmış halde. Alt blok motor ihtiyacı olanlar için ideal çözüm.</p>
+                        <div class="p-actions">
+                            <a href="tel:05348441861" class="btn-call">Fiyat Sor</a>
+                            <a href="https://wa.me/905348441861?text=Yarım%20motor%20fiyatı%20nedir?" class="btn-wp-sm"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="p-img"><i class="fas fa-cubes"></i></div>
+                    <div class="p-content">
+                        <div class="stock-status">STOKTA VAR</div>
+                        <h3 class="p-title">Silindir Üst Kapak (Dolu/Boş)</h3>
+                        <p class="p-desc">Çatlak, kaynaklı kapaklarla uğraşmayın. Testleri yapılmış, subapları alışmış garantili silindir kapakları.</p>
+                        <div class="p-actions">
+                            <a href="tel:05537383806" class="btn-call">Fiyat Sor</a>
+                            <a href="https://wa.me/905537383806?text=Silindir%20kapak%20fiyatı%20nedir?" class="btn-wp-sm"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding services">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-box">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>81 İle Anlaşmalı Kargo</h3>
+                    <p>Türkiye'nin her yerine motorunuzu en uygun kargo fiyatlarıyla, özenle paketleyerek gönderiyoruz.</p>
+                </div>
+                <div class="service-box">
+                    <i class="fas fa-tools"></i>
+                    <h3>Ankara'da Anahtar Teslim</h3>
+                    <p>Aracınızı servisimize getirin, motorunuzu takalım, testlerini yapalım, anahtar teslimi size sunalım.</p>
+                </div>
+                <div class="service-box">
+                    <i class="fas fa-truck-pickup"></i>
+                    <h3>Çekici Desteği</h3>
+                    <p>Motoru arızalı aracınızın Ankara'ya getirilmesi konusunda çekici organizasyonu desteği sağlıyoruz.</p>
                 </div>
             </div>
-            <hr>
-            <div class="seo-cities">
-                <p><strong>Hizmet Verdiğimiz Bölgeler:</strong> Adana Era Dizel Motor, Adıyaman, Afyon, Ağrı, Amasya, Ankara Hyundai Çıkma Motor, Antalya, Artvin, Aydın, Balıkesir, Bilecik, Bingöl, Bitlis, Bolu, Burdur, Bursa, Çanakkale, Çankırı, Çorum, Denizli, Diyarbakır, Edirne, Elazığ, Erzincan, Erzurum, Eskişehir, Gaziantep, Giresun, Gümüşhane, Hakkari, Hatay, Isparta, Mersin, İstanbul Accent Era Motor, İzmir, Kars, Kastamonu, Kayseri, Kırklareli, Kırşehir, Kocaeli, Konya, Kütahya, Malatya, Manisa, Kahramanmaraş, Mardin, Muğla, Muş, Nevşehir, Niğde, Ordu, Rize, Sakarya, Samsun, Siirt, Sinop, Sivas, Tekirdağ, Tokat, Trabzon, Tunceli, Şanlıurfa, Uşak, Van, Yozgat, Zonguldak, Aksaray, Bayburt, Karaman, Kırıkkale, Batman, Şırnak, Bartın, Ardahan, Iğdır, Yalova, Karabük, Kilis, Osmaniye, Düzce Era Çıkma Motor.</p>
-                <p class="mt-2">Copyright © 2024 Cihat Hyundai. Tüm hakları saklıdır.</p>
+        </div>
+    </section>
+
+    <section class="section-padding seo-text-area">
+        <div class="container seo-content">
+            <h2>Hyundai Era Dizel Motor Çözümleri</h2>
+            <p>Hyundai Accent Era araçlar, Türkiye'nin en çok tercih edilen ticari ve binek araçları arasında yer almaktadır. Özellikle 1.5 CRDi VGT motorlar, performans ve yakıt ekonomisi ile bilinir. Ancak zamanla yüksek kilometreye bağlı olarak motor yenileme ihtiyacı doğabilir. <strong>Cihat Hyundai</strong> olarak, Ankara Yenimahalle'deki merkezimizden tüm Türkiye'ye garantili, test edilmiş <strong>Era dizel motor</strong> tedariği sağlıyoruz.</p>
+
+            <h3>Neden Rektifiyeli veya Çıkma Motor?</h3>
+            <p>Hyundai fabrikası Accent Era modelinin 1.5 dizel motorunun sıfır üretimini durdurmuştur. Piyasada "sıfır sandık motor" olarak lanse edilen ürünlerin teknik olarak sıfır olması mümkün değildir. Bu motorlar profesyonel rektifiye atölyelerinde yenilenmiş motorlardır. Biz müşterilerimize dürüst davranarak, sattığımız ürünün revizyonlu veya orjinal çıkma olduğunu belirtiyoruz. Yarım motor, komple motor veya sadece silindir kapak ihtiyaçlarınızda en doğru parça tespiti için şase numaranızla bize ulaşabilirsiniz.</p>
+
+            <h3>Ödeme ve Teslimat Koşulları</h3>
+            <p>Firmamızda kredi kartı geçerli değildir, ödemeler havale/eft veya nakit yoluyla alınmaktadır. Anlaşmalı kargo firmaları ile motor blokları ve kapaklar zarar görmeyecek şekilde paletli veya kasalı olarak 81 ile sevk edilir. Ankara dışından gelen müşterilerimiz için, araçlarının servisimize çekilmesi ve anahtar teslim motor yenileme işlemi yapılması konusunda tam destek vermekteyiz.</p>
+        </div>
+    </section>
+
+    <section class="cities-section">
+        <div class="container">
+            <h4 style="margin-bottom: 20px; color: #555;">Hizmet Bölgelerimiz (Tüm Türkiye'ye Gönderim)</h4>
+            <div class="cities-grid">
+                <a href="#" title="Adana Hyundai Era Motor">Adana Era Motor</a>
+                <a href="#" title="Adıyaman Hyundai Era Motor">Adıyaman Era Motor</a>
+                <a href="#" title="Afyon Hyundai Era Motor">Afyon Era Motor</a>
+                <a href="#" title="Ağrı Hyundai Era Motor">Ağrı Era Motor</a>
+                <a href="#" title="Amasya Hyundai Era Motor">Amasya Era Motor</a>
+                <a href="#" title="Ankara Hyundai Era Motor">Ankara Era Motor</a>
+                <a href="#" title="Antalya Hyundai Era Motor">Antalya Era Motor</a>
+                <a href="#" title="Artvin Hyundai Era Motor">Artvin Era Motor</a>
+                <a href="#" title="Aydın Hyundai Era Motor">Aydın Era Motor</a>
+                <a href="#" title="Balıkesir Hyundai Era Motor">Balıkesir Era Motor</a>
+                <a href="#" title="Bilecik Hyundai Era Motor">Bilecik Era Motor</a>
+                <a href="#" title="Bingöl Hyundai Era Motor">Bingöl Era Motor</a>
+                <a href="#" title="Bitlis Hyundai Era Motor">Bitlis Era Motor</a>
+                <a href="#" title="Bolu Hyundai Era Motor">Bolu Era Motor</a>
+                <a href="#" title="Burdur Hyundai Era Motor">Burdur Era Motor</a>
+                <a href="#" title="Bursa Hyundai Era Motor">Bursa Era Motor</a>
+                <a href="#" title="Çanakkale Hyundai Era Motor">Çanakkale Era Motor</a>
+                <a href="#" title="Çankırı Hyundai Era Motor">Çankırı Era Motor</a>
+                <a href="#" title="Çorum Hyundai Era Motor">Çorum Era Motor</a>
+                <a href="#" title="Denizli Hyundai Era Motor">Denizli Era Motor</a>
+                <a href="#" title="Diyarbakır Hyundai Era Motor">Diyarbakır Era Motor</a>
+                <a href="#" title="Edirne Hyundai Era Motor">Edirne Era Motor</a>
+                <a href="#" title="Elazığ Hyundai Era Motor">Elazığ Era Motor</a>
+                <a href="#" title="Erzincan Hyundai Era Motor">Erzincan Era Motor</a>
+                <a href="#" title="Erzurum Hyundai Era Motor">Erzurum Era Motor</a>
+                <a href="#" title="Eskişehir Hyundai Era Motor">Eskişehir Era Motor</a>
+                <a href="#" title="Gaziantep Hyundai Era Motor">Gaziantep Era Motor</a>
+                <a href="#" title="Giresun Hyundai Era Motor">Giresun Era Motor</a>
+                <a href="#" title="Gümüşhane Hyundai Era Motor">Gümüşhane Era Motor</a>
+                <a href="#" title="Hakkari Hyundai Era Motor">Hakkari Era Motor</a>
+                <a href="#" title="Hatay Hyundai Era Motor">Hatay Era Motor</a>
+                <a href="#" title="Isparta Hyundai Era Motor">Isparta Era Motor</a>
+                <a href="#" title="Mersin Hyundai Era Motor">Mersin Era Motor</a>
+                <a href="#" title="İstanbul Hyundai Era Motor">İstanbul Era Motor</a>
+                <a href="#" title="İzmir Hyundai Era Motor">İzmir Era Motor</a>
+                <a href="#" title="Kars Hyundai Era Motor">Kars Era Motor</a>
+                <a href="#" title="Kastamonu Hyundai Era Motor">Kastamonu Era Motor</a>
+                <a href="#" title="Kayseri Hyundai Era Motor">Kayseri Era Motor</a>
+                <a href="#" title="Kırklareli Hyundai Era Motor">Kırklareli Era Motor</a>
+                <a href="#" title="Kırşehir Hyundai Era Motor">Kırşehir Era Motor</a>
+                <a href="#" title="Kocaeli Hyundai Era Motor">Kocaeli Era Motor</a>
+                <a href="#" title="Konya Hyundai Era Motor">Konya Era Motor</a>
+                <a href="#" title="Kütahya Hyundai Era Motor">Kütahya Era Motor</a>
+                <a href="#" title="Malatya Hyundai Era Motor">Malatya Era Motor</a>
+                <a href="#" title="Manisa Hyundai Era Motor">Manisa Era Motor</a>
+                <a href="#" title="Kahramanmaraş Hyundai Era Motor">K.Maraş Era Motor</a>
+                <a href="#" title="Mardin Hyundai Era Motor">Mardin Era Motor</a>
+                <a href="#" title="Muğla Hyundai Era Motor">Muğla Era Motor</a>
+                <a href="#" title="Muş Hyundai Era Motor">Muş Era Motor</a>
+                <a href="#" title="Nevşehir Hyundai Era Motor">Nevşehir Era Motor</a>
+                <a href="#" title="Niğde Hyundai Era Motor">Niğde Era Motor</a>
+                <a href="#" title="Ordu Hyundai Era Motor">Ordu Era Motor</a>
+                <a href="#" title="Rize Hyundai Era Motor">Rize Era Motor</a>
+                <a href="#" title="Sakarya Hyundai Era Motor">Sakarya Era Motor</a>
+                <a href="#" title="Samsun Hyundai Era Motor">Samsun Era Motor</a>
+                <a href="#" title="Siirt Hyundai Era Motor">Siirt Era Motor</a>
+                <a href="#" title="Sinop Hyundai Era Motor">Sinop Era Motor</a>
+                <a href="#" title="Sivas Hyundai Era Motor">Sivas Era Motor</a>
+                <a href="#" title="Tekirdağ Hyundai Era Motor">Tekirdağ Era Motor</a>
+                <a href="#" title="Tokat Hyundai Era Motor">Tokat Era Motor</a>
+                <a href="#" title="Trabzon Hyundai Era Motor">Trabzon Era Motor</a>
+                <a href="#" title="Tunceli Hyundai Era Motor">Tunceli Era Motor</a>
+                <a href="#" title="Şanlıurfa Hyundai Era Motor">Şanlıurfa Era Motor</a>
+                <a href="#" title="Uşak Hyundai Era Motor">Uşak Era Motor</a>
+                <a href="#" title="Van Hyundai Era Motor">Van Era Motor</a>
+                <a href="#" title="Yozgat Hyundai Era Motor">Yozgat Era Motor</a>
+                <a href="#" title="Zonguldak Hyundai Era Motor">Zonguldak Era Motor</a>
+                <a href="#" title="Aksaray Hyundai Era Motor">Aksaray Era Motor</a>
+                <a href="#" title="Bayburt Hyundai Era Motor">Bayburt Era Motor</a>
+                <a href="#" title="Karaman Hyundai Era Motor">Karaman Era Motor</a>
+                <a href="#" title="Kırıkkale Hyundai Era Motor">Kırıkkale Era Motor</a>
+                <a href="#" title="Batman Hyundai Era Motor">Batman Era Motor</a>
+                <a href="#" title="Şırnak Hyundai Era Motor">Şırnak Era Motor</a>
+                <a href="#" title="Bartın Hyundai Era Motor">Bartın Era Motor</a>
+                <a href="#" title="Ardahan Hyundai Era Motor">Ardahan Era Motor</a>
+                <a href="#" title="Iğdır Hyundai Era Motor">Iğdır Era Motor</a>
+                <a href="#" title="Yalova Hyundai Era Motor">Yalova Era Motor</a>
+                <a href="#" title="Karabük Hyundai Era Motor">Karabük Era Motor</a>
+                <a href="#" title="Kilis Hyundai Era Motor">Kilis Era Motor</a>
+                <a href="#" title="Osmaniye Hyundai Era Motor">Osmaniye Era Motor</a>
+                <a href="#" title="Düzce Hyundai Era Motor">Düzce Era Motor</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Cihat Hyundai</h3>
+                    <p>Hyundai Accent Era dizel motor konusunda uzmanlaşmış ekibimizle, Türkiye'nin her yerine güvenilir parça tedariği sağlıyoruz.</p>
+                    <div class="footer-social" style="margin-top:20px;">
+                        <a href="https://www.facebook.com/cihathyundai" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/cihathyundai" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@cihathyundai" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h3>İletişim</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Serhat Mah. 1126. Cad. No: 14<br>Yenimahalle / ANKARA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:05537383806">0553 738 38 06</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:05348441861">0534 844 18 61</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-map">
+                    <h3>Konum</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.9!2d32.746!3d39.970!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU4JzE0LjkiTiAzMsKwNDQnNDYuMyJF!5e0!3m2!1str!2str!4v1600000000000!5m2!1str!2str" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div style="text-align: center; border-top: 1px solid #444; padding-top: 20px; font-size: 0.8rem;">
+                &copy; 2024 Cihat Hyundai - Tüm Hakları Saklıdır. | eradizelmotor.com.tr
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/905537383806?text=Merhaba,%20Era%20dizel%20motor%20fiyatı%20almak%20istiyorum." class="btn-whatsapp-fixed" target="_blank">
-        <i class="fab fa-whatsapp fa-lg"></i> WhatsApp
+    <div class="mobile-sticky">
+        <a href="tel:05537383806" style="background-color: var(--primary-blue);"><i class="fas fa-phone"></i> ARA</a>
+        <a href="https://wa.me/905537383806" style="background-color: var(--whatsapp-green);"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+    </div>
+
+    <a href="https://wa.me/905537383806?text=Merhaba,%20web%20sitenizden%20yazıyorum." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
 </body>
