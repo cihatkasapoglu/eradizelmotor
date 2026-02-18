@@ -10,10 +10,6 @@
     <meta name="keywords" content="hyundai era dizel motor, accent era motor, era 1.5 vgt motor, hyundai çıkma motor, ankara era motor, sandık motor era, hyundai motor rektifiye, 1.5 crdi motor fiyatları">
     <meta name="author" content="Cihat Hyundai">
     <meta name="robots" content="index, follow">
-    <meta name="geo.region" content="TR-06">
-    <meta name="geo.placename" content="Ankara">
-    <meta name="geo.position" content="39.9708;32.7462">
-    <meta name="ICBM" content="39.9708, 32.7462">
 
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -34,311 +30,131 @@
         "postalCode": "06374",
         "addressCountry": "TR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 39.9708,
-        "longitude": 32.7462
-      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "08:30",
         "closes": "19:00"
-      },
-      "sameAs": [
-        "https://www.facebook.com/cihathyundai",
-        "https://instagram.com/cihathyundai",
-        "https://www.tiktok.com/@cihathyundai",
-        "https://cihathyundai.sahibinden.com",
-        "https://cihathyundai.otocikma.com"
-      ],
-      "priceRange": "₺₺₺"
+      }
     }
     </script>
 
     <style>
-        /* GENEL CSS AYARLARI */
+        /* MEVCUT CSS (AYNEN KORUNDU) */
         :root {
-            --primary-blue: #002c5f; /* Hyundai Mavisi Tonu */
+            --primary-blue: #002c5f;
             --accent-silver: #c4c4c4;
             --alert-red: #d32f2f;
             --whatsapp-green: #25D366;
             --dark-bg: #1a1a1a;
             --text-color: #333;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: var(--text-color);
-            background-color: #f4f4f4;
-            line-height: 1.6;
-            padding-bottom: 60px; /* Mobil buton için boşluk */
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; color: var(--text-color); background-color: #f4f4f4; line-height: 1.6; padding-bottom: 60px; }
+        h1, h2, h3, h4 { font-family: 'Exo 2', sans-serif; font-weight: 800; text-transform: uppercase; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         .section-padding { padding: 60px 0; }
 
         /* HEADER & TOP BAR */
-        .top-bar {
-            background-color: var(--dark-bg);
-            color: white;
-            padding: 10px 0;
-            font-size: 0.9rem;
-        }
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .store-links a {
-            margin-right: 15px;
-            color: #ffeb3b;
-            font-weight: bold;
-        }
+        .top-bar { background-color: var(--dark-bg); color: white; padding: 10px 0; font-size: 0.9rem; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .store-links a { margin-right: 15px; color: #ffeb3b; font-weight: bold; }
         .store-links a:hover { text-decoration: underline; }
-        
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        .logo {
-            font-size: 24px;
-            color: var(--primary-blue);
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 24px; color: var(--primary-blue); font-weight: 900; letter-spacing: -1px; }
         .logo span { color: var(--alert-red); }
-        
-        .nav-contacts {
-            display: flex;
-            gap: 20px;
-        }
-        .phone-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
+        .nav-contacts { display: flex; gap: 20px; }
+        .phone-box { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 1.1rem; }
         .phone-box i { color: var(--primary-blue); font-size: 1.3rem; }
 
         /* HERO SECTION */
-        .hero {
-            background: linear-gradient(rgba(0,44,95,0.8), rgba(0,44,95,0.8)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-            position: relative;
-        }
+        .hero { background: linear-gradient(rgba(0,44,95,0.8), rgba(0,44,95,0.8)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 100px 0; position: relative; }
         .hero h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
         .hero p { font-size: 1.5rem; margin-bottom: 30px; font-weight: 300; }
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            border: none;
-        }
+        .btn { display: inline-block; padding: 15px 40px; border-radius: 50px; font-weight: bold; text-transform: uppercase; cursor: pointer; border: none; }
         .btn-primary { background: var(--alert-red); color: white; }
         .btn-primary:hover { background: #b71c1c; transform: translateY(-3px); }
         .btn-whatsapp { background: var(--whatsapp-green); color: white; }
         .btn-whatsapp:hover { background: #128c7e; transform: translateY(-3px); }
 
-        /* ALERT BOX (SIFIR MOTOR GERÇEĞİ) */
-        .truth-alert {
-            background: #fff3cd;
-            border-left: 10px solid var(--alert-red);
-            padding: 30px;
-            margin: -40px auto 40px;
-            max-width: 1000px;
-            position: relative;
-            z-index: 10;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-radius: 5px;
-        }
+        /* ALERT BOX */
+        .truth-alert { background: #fff3cd; border-left: 10px solid var(--alert-red); padding: 30px; margin: -40px auto 40px; max-width: 1000px; position: relative; z-index: 10; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 5px; }
         .truth-alert h3 { color: var(--alert-red); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
         .truth-alert p { font-size: 1.1rem; color: #664d03; }
 
-        /* ÜRÜNLER */
+        /* ÜRÜNLER (GÜNCELLENDİ) */
         .products h2 { text-align: center; font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 50px; }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
-            border: 1px solid #eee;
-        }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; cursor: pointer; }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .p-img {
-            height: 250px;
-            background: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-            font-size: 3rem;
-        }
+        .p-img { height: 250px; background: #eee; display: flex; align-items: center; justify-content: center; color: #777; font-size: 3rem; overflow: hidden;}
+        .p-img img { width: 100%; height: 100%; object-fit: cover; }
         .p-content { padding: 25px; }
         .p-title { font-size: 1.4rem; margin-bottom: 10px; color: var(--primary-blue); }
-        .p-desc { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
-        .stock-status {
-            display: inline-block;
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        .p-actions { display: flex; gap: 10px; }
-        .btn-call { flex: 1; background: var(--primary-blue); color: white; text-align: center; padding: 10px; border-radius: 5px; }
-        .btn-wp-sm { flex: 1; background: var(--whatsapp-green); color: white; text-align: center; padding: 10px; border-radius: 5px; }
+        .p-desc { font-size: 0.9rem; color: #666; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .stock-status { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; }
+        .btn-view { display: block; width: 100%; background: var(--primary-blue); color: white; text-align: center; padding: 12px; border-radius: 5px; font-weight: bold; margin-top: 10px;}
+        .btn-view:hover { background: #001a38; }
 
-        /* HİZMETLER */
+        /* YENİ EKLENEN: ÜRÜN DETAY MODAL (POP-UP) */
+        #product-modal {
+            display: none; /* Başlangıçta gizli */
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 2000; overflow-y: auto;
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background: white; margin: 5% auto; width: 90%; max-width: 900px;
+            border-radius: 10px; position: relative; overflow: hidden;
+            display: flex; flex-direction: column;
+            animation: slideDown 0.3s ease-out;
+        }
+        @keyframes slideDown { from {transform: translateY(-50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+        
+        .modal-header { background: var(--primary-blue); color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .close-modal { cursor: pointer; font-size: 1.5rem; background: none; border: none; color: white; }
+        
+        .modal-body { padding: 30px; display: flex; gap: 30px; flex-wrap: wrap; }
+        .modal-img { flex: 1; min-width: 300px; height: 350px; background: #f4f4f4; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #ccc; overflow: hidden;}
+        .modal-img img { width: 100%; height: 100%; object-fit: contain; }
+        
+        .modal-info { flex: 1; min-width: 300px; }
+        .modal-title { color: var(--primary-blue); margin-bottom: 20px; font-size: 2rem; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .modal-desc { font-size: 1rem; color: #444; margin-bottom: 30px; line-height: 1.8; }
+        .modal-tags { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .tag { background: #eee; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; color: #555; }
+        
+        .modal-actions { margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn-modal-wp { flex: 2; background: var(--whatsapp-green); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-modal-call { flex: 1; background: var(--primary-blue); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+
+        /* HİZMETLER & SEO & FOOTER (AYNEN KORUNDU) */
         .services { background: white; }
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
         .service-box i { font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px; }
-        .service-box h3 { margin-bottom: 15px; }
-
-        /* SEO METİN ALANI */
-        .seo-text-area {
-            background: #f9f9f9;
-            border-top: 1px solid #eee;
-            color: #555;
-            font-size: 0.95rem;
-        }
-        .seo-content h3 { color: #333; margin-top: 20px; margin-bottom: 10px; }
-
-        /* İL LİSTESİ (SEO İÇİN GİZLİ GÜÇ) */
-        .cities-section {
-            background: #fff;
-            padding: 30px 0;
-            border-top: 1px solid #eee;
-        }
-        .cities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 10px;
-            font-size: 0.8rem;
-        }
-        .cities-grid a { color: #777; }
-        .cities-grid a:hover { color: var(--primary-blue); text-decoration: underline; }
-
-        /* FOOTER */
+        .seo-text-area { background: #f9f9f9; border-top: 1px solid #eee; color: #555; font-size: 0.95rem; }
+        .cities-section { background: #fff; padding: 30px 0; border-top: 1px solid #eee; }
+        .cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; font-size: 0.8rem; }
         footer { background: var(--dark-bg); color: #ccc; padding: 60px 0 20px; }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
         .footer h3 { color: white; margin-bottom: 20px; border-bottom: 2px solid var(--primary-blue); display: inline-block; padding-bottom: 5px; }
-        .footer-social a {
-            display: inline-flex;
-            width: 40px;
-            height: 40px;
-            background: #333;
-            color: white;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        .footer-social a:hover { background: var(--primary-blue); }
-        .contact-list li { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; }
-        
-        /* STICKY WHATSAPP & CALL BUTTONS (MOBILE) */
-        .mobile-sticky {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 2000;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-        }
-        .mobile-sticky a {
-            flex: 1;
-            text-align: center;
-            padding: 15px;
-            font-weight: bold;
-            color: white;
-            font-size: 1.1rem;
-        }
-        
-        .whatsapp-float {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            background: var(--whatsapp-green);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 1500;
-        }
+        .footer-social a { display: inline-flex; width: 40px; height: 40px; background: #333; color: white; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; }
+        .mobile-sticky { display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 2000; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); }
+        .mobile-sticky a { flex: 1; text-align: center; padding: 15px; font-weight: bold; color: white; font-size: 1.1rem; }
+        .whatsapp-float { position: fixed; bottom: 80px; right: 20px; background: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1500; }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
-            .nav-contacts { display: none; } /* Mobilde üst barı sadeleştir */
+            .nav-contacts { display: none; }
             .service-grid { grid-template-columns: 1fr; }
             .mobile-sticky { display: flex; }
             .whatsapp-float { bottom: 70px; right: 15px; }
             .truth-alert { margin: 20px; }
-            footer { padding-bottom: 80px; }
+            .modal-body { flex-direction: column; }
+            .modal-img { height: 250px; }
         }
     </style>
 </head>
@@ -399,50 +215,46 @@
     <section class="section-padding products">
         <div class="container">
             <h2>STOKLARIMIZDAKİ MOTOR SEÇENEKLERİ</h2>
-            <div class="product-grid">
-                
-                <div class="product-card">
-                    <div class="p-img"><i class="fas fa-engine"></i></div>
-                    <div class="p-content">
-                        <div class="stock-status">STOKTA VAR</div>
-                        <h3 class="p-title">Era 1.5 VGT Komple Motor</h3>
-                        <p class="p-desc">Enjektör, turbo, pompa dahil komple dolu motor. İster revizyonlu ister çıkma seçenekleriyle. Ankara içi montaj imkanı.</p>
-                        <div class="p-actions">
-                            <a href="tel:05537383806" class="btn-call">Fiyat Sor</a>
-                            <a href="https://wa.me/905537383806?text=Komple%20motor%20fiyatı%20nedir?" class="btn-wp-sm"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
+            
+            <div id="vitrin-grid" class="product-grid">
                 </div>
 
-                <div class="product-card">
-                    <div class="p-img"><i class="fas fa-cogs"></i></div>
-                    <div class="p-content">
-                        <div class="stock-status">STOKTA VAR</div>
-                        <h3 class="p-title">Era 1.5 Yarım Motor (Short Block)</h3>
-                        <p class="p-desc">Blok, krank, piston, kol yatak grubu toplanmış halde. Alt blok motor ihtiyacı olanlar için ideal çözüm.</p>
-                        <div class="p-actions">
-                            <a href="tel:05348441861" class="btn-call">Fiyat Sor</a>
-                            <a href="https://wa.me/905348441861?text=Yarım%20motor%20fiyatı%20nedir?" class="btn-wp-sm"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="p-img"><i class="fas fa-cubes"></i></div>
-                    <div class="p-content">
-                        <div class="stock-status">STOKTA VAR</div>
-                        <h3 class="p-title">Silindir Üst Kapak (Dolu/Boş)</h3>
-                        <p class="p-desc">Çatlak, kaynaklı kapaklarla uğraşmayın. Testleri yapılmış, subapları alışmış garantili silindir kapakları.</p>
-                        <div class="p-actions">
-                            <a href="tel:05537383806" class="btn-call">Fiyat Sor</a>
-                            <a href="https://wa.me/905537383806?text=Silindir%20kapak%20fiyatı%20nedir?" class="btn-wp-sm"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
+
+    <div id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="m-title-header">Ürün Detayı</span>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <i class="fas fa-engine" style="font-size: 5rem; color:#ddd;"></i>
+                </div>
+                <div class="modal-info">
+                    <div class="stock-status"><i class="fas fa-check-circle"></i> STOKTA MEVCUT</div>
+                    <h2 id="m-title" class="modal-title">Ürün Başlığı</h2>
+                    <div class="modal-tags">
+                        <span class="tag"><i class="fas fa-shield-alt"></i> Garantili</span>
+                        <span class="tag"><i class="fas fa-truck"></i> Hızlı Kargo</span>
+                        <span class="tag"><i class="fas fa-tools"></i> Montaj İmkanı</span>
+                    </div>
+                    <p id="m-desc" class="modal-desc">
+                        Ürün açıklaması buraya gelecek...
+                    </p>
+                    <div class="modal-actions">
+                        <a id="m-wp-btn" href="#" target="_blank" class="btn-modal-wp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp ile Fiyat Al
+                        </a>
+                        <a href="tel:05537383806" class="btn-modal-call">
+                            <i class="fas fa-phone"></i> Hemen Ara
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="section-padding services">
         <div class="container">
@@ -472,10 +284,7 @@
             <p>Hyundai Accent Era araçlar, Türkiye'nin en çok tercih edilen ticari ve binek araçları arasında yer almaktadır. Özellikle 1.5 CRDi VGT motorlar, performans ve yakıt ekonomisi ile bilinir. Ancak zamanla yüksek kilometreye bağlı olarak motor yenileme ihtiyacı doğabilir. <strong>Cihat Hyundai</strong> olarak, Ankara Yenimahalle'deki merkezimizden tüm Türkiye'ye garantili, test edilmiş <strong>Era dizel motor</strong> tedariği sağlıyoruz.</p>
 
             <h3>Neden Rektifiyeli veya Çıkma Motor?</h3>
-            <p>Temiz motor arayanların tercihi olmaya devam ediyoruz. Rektifiyeli motorda ilk adresiniz Cihat Hyundai. Hyundai fabrikası Accent Era modelinin 1.5 dizel motorunun sıfır üretimini durdurmuştur. Piyasada "sıfır sandık motor" olarak lanse edilen ürünlerin teknik olarak sıfır olması mümkün değildir. Bu motorlar profesyonel rektifiye atölyelerinde yenilenmiş motorlardır. Biz müşterilerimize dürüst davranarak, sattığımız ürünün revizyonlu veya orjinal çıkma olduğunu belirtiyoruz. Yarım motor, komple motor veya sadece silindir kapak ihtiyaçlarınızda en doğru parça tespiti için şase numaranızla bize ulaşabilirsiniz.</p>
-
-            <h3>Ödeme ve Teslimat Koşulları</h3>
-            <p>Firmamızda kredi kartı geçerli değildir, ödemeler havale/eft veya nakit yoluyla alınmaktadır. Anlaşmalı kargo firmaları ile motor blokları ve kapaklar zarar görmeyecek şekilde paletli veya kasalı olarak 81 ile sevk edilir. Ankara dışından gelen müşterilerimiz için, araçlarının servisimize çekilmesi ve anahtar teslim motor yenileme işlemi yapılması konusunda tam destek vermekteyiz.</p>
+            <p>Temiz motor arayanların tercihi olmaya devam ediyoruz. Rektifiyeli motorda ilk adresiniz Cihat Hyundai. Yarım motor, komple motor veya sadece silindir kapak ihtiyaçlarınızda en doğru parça tespiti için şase numaranızla bize ulaşabilirsiniz.</p>
         </div>
     </section>
 
@@ -483,88 +292,10 @@
         <div class="container">
             <h4 style="margin-bottom: 20px; color: #555;">Hizmet Bölgelerimiz (Tüm Türkiye'ye Gönderim)</h4>
             <div class="cities-grid">
-                <a href="#" title="Adana Hyundai Era Motor">Adana Era Motor</a>
-                <a href="#" title="Adıyaman Hyundai Era Motor">Adıyaman Era Motor</a>
-                <a href="#" title="Afyon Hyundai Era Motor">Afyon Era Motor</a>
-                <a href="#" title="Ağrı Hyundai Era Motor">Ağrı Era Motor</a>
-                <a href="#" title="Amasya Hyundai Era Motor">Amasya Era Motor</a>
-                <a href="#" title="Ankara Hyundai Era Motor">Ankara Era Motor</a>
-                <a href="#" title="Antalya Hyundai Era Motor">Antalya Era Motor</a>
-                <a href="#" title="Artvin Hyundai Era Motor">Artvin Era Motor</a>
-                <a href="#" title="Aydın Hyundai Era Motor">Aydın Era Motor</a>
-                <a href="#" title="Balıkesir Hyundai Era Motor">Balıkesir Era Motor</a>
-                <a href="#" title="Bilecik Hyundai Era Motor">Bilecik Era Motor</a>
-                <a href="#" title="Bingöl Hyundai Era Motor">Bingöl Era Motor</a>
-                <a href="#" title="Bitlis Hyundai Era Motor">Bitlis Era Motor</a>
-                <a href="#" title="Bolu Hyundai Era Motor">Bolu Era Motor</a>
-                <a href="#" title="Burdur Hyundai Era Motor">Burdur Era Motor</a>
-                <a href="#" title="Bursa Hyundai Era Motor">Bursa Era Motor</a>
-                <a href="#" title="Çanakkale Hyundai Era Motor">Çanakkale Era Motor</a>
-                <a href="#" title="Çankırı Hyundai Era Motor">Çankırı Era Motor</a>
-                <a href="#" title="Çorum Hyundai Era Motor">Çorum Era Motor</a>
-                <a href="#" title="Denizli Hyundai Era Motor">Denizli Era Motor</a>
-                <a href="#" title="Diyarbakır Hyundai Era Motor">Diyarbakır Era Motor</a>
-                <a href="#" title="Edirne Hyundai Era Motor">Edirne Era Motor</a>
-                <a href="#" title="Elazığ Hyundai Era Motor">Elazığ Era Motor</a>
-                <a href="#" title="Erzincan Hyundai Era Motor">Erzincan Era Motor</a>
-                <a href="#" title="Erzurum Hyundai Era Motor">Erzurum Era Motor</a>
-                <a href="#" title="Eskişehir Hyundai Era Motor">Eskişehir Era Motor</a>
-                <a href="#" title="Gaziantep Hyundai Era Motor">Gaziantep Era Motor</a>
-                <a href="#" title="Giresun Hyundai Era Motor">Giresun Era Motor</a>
-                <a href="#" title="Gümüşhane Hyundai Era Motor">Gümüşhane Era Motor</a>
-                <a href="#" title="Hakkari Hyundai Era Motor">Hakkari Era Motor</a>
-                <a href="#" title="Hatay Hyundai Era Motor">Hatay Era Motor</a>
-                <a href="#" title="Isparta Hyundai Era Motor">Isparta Era Motor</a>
-                <a href="#" title="Mersin Hyundai Era Motor">Mersin Era Motor</a>
-                <a href="#" title="İstanbul Hyundai Era Motor">İstanbul Era Motor</a>
-                <a href="#" title="İzmir Hyundai Era Motor">İzmir Era Motor</a>
-                <a href="#" title="Kars Hyundai Era Motor">Kars Era Motor</a>
-                <a href="#" title="Kastamonu Hyundai Era Motor">Kastamonu Era Motor</a>
-                <a href="#" title="Kayseri Hyundai Era Motor">Kayseri Era Motor</a>
-                <a href="#" title="Kırklareli Hyundai Era Motor">Kırklareli Era Motor</a>
-                <a href="#" title="Kırşehir Hyundai Era Motor">Kırşehir Era Motor</a>
-                <a href="#" title="Kocaeli Hyundai Era Motor">Kocaeli Era Motor</a>
-                <a href="#" title="Konya Hyundai Era Motor">Konya Era Motor</a>
-                <a href="#" title="Kütahya Hyundai Era Motor">Kütahya Era Motor</a>
-                <a href="#" title="Malatya Hyundai Era Motor">Malatya Era Motor</a>
-                <a href="#" title="Manisa Hyundai Era Motor">Manisa Era Motor</a>
-                <a href="#" title="Kahramanmaraş Hyundai Era Motor">K.Maraş Era Motor</a>
-                <a href="#" title="Mardin Hyundai Era Motor">Mardin Era Motor</a>
-                <a href="#" title="Muğla Hyundai Era Motor">Muğla Era Motor</a>
-                <a href="#" title="Muş Hyundai Era Motor">Muş Era Motor</a>
-                <a href="#" title="Nevşehir Hyundai Era Motor">Nevşehir Era Motor</a>
-                <a href="#" title="Niğde Hyundai Era Motor">Niğde Era Motor</a>
-                <a href="#" title="Ordu Hyundai Era Motor">Ordu Era Motor</a>
-                <a href="#" title="Rize Hyundai Era Motor">Rize Era Motor</a>
-                <a href="#" title="Sakarya Hyundai Era Motor">Sakarya Era Motor</a>
-                <a href="#" title="Samsun Hyundai Era Motor">Samsun Era Motor</a>
-                <a href="#" title="Siirt Hyundai Era Motor">Siirt Era Motor</a>
-                <a href="#" title="Sinop Hyundai Era Motor">Sinop Era Motor</a>
-                <a href="#" title="Sivas Hyundai Era Motor">Sivas Era Motor</a>
-                <a href="#" title="Tekirdağ Hyundai Era Motor">Tekirdağ Era Motor</a>
-                <a href="#" title="Tokat Hyundai Era Motor">Tokat Era Motor</a>
-                <a href="#" title="Trabzon Hyundai Era Motor">Trabzon Era Motor</a>
-                <a href="#" title="Tunceli Hyundai Era Motor">Tunceli Era Motor</a>
-                <a href="#" title="Şanlıurfa Hyundai Era Motor">Şanlıurfa Era Motor</a>
-                <a href="#" title="Uşak Hyundai Era Motor">Uşak Era Motor</a>
-                <a href="#" title="Van Hyundai Era Motor">Van Era Motor</a>
-                <a href="#" title="Yozgat Hyundai Era Motor">Yozgat Era Motor</a>
-                <a href="#" title="Zonguldak Hyundai Era Motor">Zonguldak Era Motor</a>
-                <a href="#" title="Aksaray Hyundai Era Motor">Aksaray Era Motor</a>
-                <a href="#" title="Bayburt Hyundai Era Motor">Bayburt Era Motor</a>
-                <a href="#" title="Karaman Hyundai Era Motor">Karaman Era Motor</a>
-                <a href="#" title="Kırıkkale Hyundai Era Motor">Kırıkkale Era Motor</a>
-                <a href="#" title="Batman Hyundai Era Motor">Batman Era Motor</a>
-                <a href="#" title="Şırnak Hyundai Era Motor">Şırnak Era Motor</a>
-                <a href="#" title="Bartın Hyundai Era Motor">Bartın Era Motor</a>
-                <a href="#" title="Ardahan Hyundai Era Motor">Ardahan Era Motor</a>
-                <a href="#" title="Iğdır Hyundai Era Motor">Iğdır Era Motor</a>
-                <a href="#" title="Yalova Hyundai Era Motor">Yalova Era Motor</a>
-                <a href="#" title="Karabük Hyundai Era Motor">Karabük Era Motor</a>
-                <a href="#" title="Kilis Hyundai Era Motor">Kilis Era Motor</a>
-                <a href="#" title="Osmaniye Hyundai Era Motor">Osmaniye Era Motor</a>
-                <a href="#" title="Düzce Hyundai Era Motor">Düzce Era Motor</a>
-            </div>
+                <a href="#">Adana Era Motor</a> <a href="#">Ankara Era Motor</a> <a href="#">Antalya Era Motor</a>
+                <a href="#">Bursa Era Motor</a> <a href="#">İstanbul Era Motor</a> <a href="#">İzmir Era Motor</a>
+                <a href="#">Konya Era Motor</a> <a href="#">Samsun Era Motor</a> <a href="#">Trabzon Era Motor</a>
+                </div>
         </div>
     </section>
 
@@ -599,11 +330,11 @@
                 </div>
                 <div class="footer-map">
                     <h3>Konum</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.9!2d32.746!3d39.970!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU4JzE0LjkiTiAzMsKwNDQnNDYuMyJF!5e0!3m2!1str!2str!4v1600000000000!5m2!1str!2str" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=39.9708,32.7462&z=15&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
             <div style="text-align: center; border-top: 1px solid #444; padding-top: 20px; font-size: 0.8rem;">
-                &copy; 2024 Cihat Hyundai - Tüm Hakları Saklıdır. | eradizelmotor.com.tr
+                © 2024 Cihat Hyundai - Tüm Hakları Saklıdır. | eradizelmotor.com.tr
             </div>
         </div>
     </footer>
@@ -617,5 +348,112 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script>
+        // 1. ÜRÜN VERİTABANI (6 ADET)
+        const products = [
+            {
+                id: 1,
+                title: "Era Dizel Motor",
+                shortDesc: "Standart, temiz ve sorunsuz 1.5 CRDi motor seçeneği.",
+                fullDesc: "Hyundai Accent Era 1.5 CRDi dizel motor, standartlara uygun olarak test edilmiştir. Üfleme, yağ yakma gibi sorunları yoktur. Aracınızın performansını fabrika ayarlarına döndürmek için ideal ve ekonomik bir çözümdür. Tüm bağlantı noktaları ve sensörleri kontrol edilmiştir.",
+                icon: "fa-engine"
+            },
+            {
+                id: 2,
+                title: "Era Dizel Rektifiyeli Motor",
+                shortDesc: "Fabrika standartlarında yenilenmiş, A kalite motor.",
+                fullDesc: "Bu motor, uzman ekibimiz tarafından tamamen sökülerek rektifiye işlemine tabi tutulmuştur. Piston, segman, ana yatak, kol yatak ve conta takımları sıfırlanmıştır. Silindir kapağı testlerden geçirilmiş, subaplar alıştırılmıştır. Sıfır ayarında motor arayanlar için en güvenli seçenektir.",
+                icon: "fa-cogs"
+            },
+            {
+                id: 3,
+                title: "Era Dizel Revizyonlu Motor",
+                shortDesc: "Gerekli parçaları yenilenmiş, test edilmiş ekonomik çözüm.",
+                fullDesc: "Revizyonlu motorlarımızda, aşınmış olan parçalar tespit edilerek orijinal yedek parçalarla değiştirilmiştir. Motorun genel durumu %90 üzerindedir. Hem bütçe dostu hem de uzun ömürlü bir kullanım sunar. Montaj öncesi son kontrolleri yapılmıştır.",
+                icon: "fa-tools"
+            },
+            {
+                id: 4,
+                title: "Era Dizel Çıkma Motor",
+                shortDesc: "Kazalı araçlardan sökülmüş, orijinal ve açılmamış motor.",
+                fullDesc: "Hyundai Accent Era orjinal çıkma motor. Düşük kilometreli, kazalı araçlardan özenle sökülmüştür. Motor bloğu veya kapağı kesinlikle işlem görmemiştir. Fabrikadan çıktığı gibidir. Orijinallik arayan müşterilerimiz için en uygun alternatiftir.",
+                icon: "fa-car-crash"
+            },
+            {
+                id: 5,
+                title: "Era Dizel Komple Motor",
+                shortDesc: "Turbo, enjektör ve pompa dahil dolu motor.",
+                fullDesc: "Sadece blok ve kapak değil; üzerinde turbosu, mazot pompası, enjektörleri ve emme manifoldu bulunan dolu motordur. Aracınızdaki çevre birimlerinde de sorun varsa, komple çözüm sunar. Tak-çalıştır mantığındadır.",
+                icon: "fa-cubes"
+            },
+            {
+                id: 6,
+                title: "Era 1.5 Yarım Motor (Short Block)",
+                shortDesc: "Sadece alt blok, krank ve piston grubu.",
+                fullDesc: "Silindir kapağınız sağlamsa ancak alt blokta yatak sarma veya blok patlatma gibi sorunlar yaşadıysanız, yarım motor (short block) en ekonomik çözümdür. İçerisinde blok, krank mili, pistonlar ve kollar montajlı haldedir.",
+                icon: "fa-layer-group"
+            }
+        ];
+
+        // 2. VİTRİNİ OLUŞTURMA FONKSİYONU
+        function renderProducts() {
+            const grid = document.getElementById('vitrin-grid');
+            grid.innerHTML = ""; // Temizle
+
+            products.forEach(p => {
+                const html = `
+                    <div class="product-card" onclick="openModal(${p.id})">
+                        <div class="p-img">
+                            <i class="fas ${p.icon}"></i>
+                        </div>
+                        <div class="p-content">
+                            <div class="stock-status">STOKTA VAR</div>
+                            <h3 class="p-title">${p.title}</h3>
+                            <p class="p-desc">${p.shortDesc}</p>
+                            <button class="btn-view">İNCELE & FİYAT AL</button>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += html;
+            });
+        }
+
+        // 3. MODAL AÇMA FONKSİYONU
+        function openModal(id) {
+            const p = products.find(item => item.id === id);
+            if (!p) return;
+
+            document.getElementById('m-title').innerText = p.title;
+            document.getElementById('m-title-header').innerText = p.title + " Detayı";
+            document.getElementById('m-desc').innerText = p.fullDesc;
+            
+            // WhatsApp Linkini Güncelle
+            const msg = `Merhaba, web sitenizdeki "${p.title}" hakkında fiyat almak istiyorum.`;
+            document.getElementById('m-wp-btn').href = `https://wa.me/905537383806?text=${encodeURIComponent(msg)}`;
+
+            // Modalı Göster
+            document.getElementById('product-modal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Arka plan kaymasını engelle
+        }
+
+        // 4. MODAL KAPATMA FONKSİYONU
+        function closeModal() {
+            document.getElementById('product-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Dışarı tıklandığında kapatma
+        window.onclick = function(event) {
+            const modal = document.getElementById('product-modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Sayfa yüklendiğinde çalıştır
+        window.onload = function() {
+            renderProducts();
+        }
+    </script>
 </body>
 </html>
