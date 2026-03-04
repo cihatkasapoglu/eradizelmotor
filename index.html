@@ -123,6 +123,26 @@
         .mobile-sticky a { flex: 1; text-align: center; padding: 15px; font-weight: bold; color: white; font-size: 1.1rem; }
         .whatsapp-float { position: fixed; bottom: 80px; right: 20px; background: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1500; }
 
+        /* --- YENİ EKLENEN HAKKIMIZDA VE SSS STİLLERİ --- */
+        .about-section { background: white; }
+        .about-flex { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+        .about-img { flex: 1; min-width: 300px; }
+        .about-img img { width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); object-fit: cover; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-text h2 { color: var(--primary-blue); margin-bottom: 20px; font-size: 2.2rem; }
+        .about-text p { margin-bottom: 15px; font-size: 1.05rem; }
+        .about-list li { margin-bottom: 10px; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+        .about-list i { color: var(--whatsapp-green); font-size: 1.2rem; }
+
+        .faq-section { background: #f4f4f4; }
+        .faq-section h2 { text-align: center; color: var(--primary-blue); margin-bottom: 40px; font-size: 2.2rem; }
+        .faq-container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        .faq-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-left: 5px solid var(--primary-blue); cursor: pointer; transition: 0.3s; }
+        .faq-item:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .faq-item summary { font-weight: bold; font-size: 1.1rem; color: var(--primary-blue); outline: none; }
+        .faq-item summary::-webkit-details-marker { display: none; } /* Safari varsayılan oku gizle */
+        .faq-item p { margin-top: 15px; color: #555; border-top: 1px solid #eee; padding-top: 15px; }
+
         @media (max-width: 768px) {
             .nav-contacts { display: none; }
             .hero h1 { font-size: 2rem; }
@@ -175,6 +195,26 @@
         </div>
     </div>
 
+    <section class="section-padding about-section">
+        <div class="container">
+            <div class="about-flex">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Cihat Hyundai Hakkımızda" height="400">
+                </div>
+                <div class="about-text">
+                    <h2>BİZ KİMİZ?</h2>
+                    <p>Ankara Yenimahalle'de kurulan <strong>Cihat Hyundai</strong>, yılların getirdiği sektörel tecrübe ile Hyundai Accent Era dizel motorları başta olmak üzere, çıkma ve rektifiyeli motor satışında Türkiye'nin güvenilir merkezlerinden biridir.</p>
+                    <p>Amacımız, müşterilerimize şeffaf ve dürüst bir hizmet sunmaktır. Alanında uzman ekibimizle, aracınızın kalbini yeniliyor ve performansını ilk günkü seviyesine taşıyoruz.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> Sektörde Uzman Kadro ve Profesyonel İşçilik</li>
+                        <li><i class="fas fa-check-circle"></i> Test Edilmiş, Garantili Çıkma ve Revizyonlu Ürünler</li>
+                        <li><i class="fas fa-check-circle"></i> Ankara'dan 81 İle Hızlı ve Güvenilir Teslimat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-padding products">
         <div class="container">
             <h2>VİTRİN İLANLARI</h2>
@@ -224,6 +264,30 @@
                     <h3>Garantili Satış</h3>
                     <p>Tüm motorlarımız test edilmiş ve garantilidir.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding faq-section">
+        <div class="container">
+            <h2>SIKÇA SORULAN SORULAR</h2>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary><i class="fas fa-question-circle" style="margin-right: 10px;"></i> Satın aldığım motor garantili mi?</summary>
+                    <p>Evet, Cihat Hyundai güvencesiyle sattığımız tüm çıkma, rektifiyeli ve revizyonlu motorlar firmamızın garantisi altındadır. Ürünlerimiz uzman ekibimiz tarafından test edilerek satışa sunulmaktadır.</p>
+                </details>
+                <details class="faq-item">
+                    <summary><i class="fas fa-question-circle" style="margin-right: 10px;"></i> Şehir dışındayım, kargo gönderiminiz var mı?</summary>
+                    <p>Kesinlikle. Ankara Yenimahalle merkezli depomuzdan, anlaşmalı olduğumuz kargo firmaları aracılığıyla Türkiye'nin 81 iline hızlı ve güvenli gönderim sağlamaktayız.</p>
+                </details>
+                <details class="faq-item">
+                    <summary><i class="fas fa-question-circle" style="margin-right: 10px;"></i> Rektifiyeli motor ile çıkma motor arasındaki fark nedir?</summary>
+                    <p>Çıkma motor; kazalı araçlardan özenle sökülen ve içi hiç açılmamış, orjinal kondisyondaki motorlardır. Rektifiyeli (revizyonlu) motor ise; aşınmış mekanik parçaları (piston, segman, yatak vs.) yenilenerek fabrika ayarlarına döndürülmüş temiz motorlardır.</p>
+                </details>
+                <details class="faq-item">
+                    <summary><i class="fas fa-question-circle" style="margin-right: 10px;"></i> Eski arızalı motorumu takasa verebilir miyim?</summary>
+                    <p>Evet, bazı durumlarda eski arızalı motorunuzu (hurda bedeli veya takas yoluyla) değerlendirebiliyoruz. Konu hakkında en net bilgiyi almak için WhatsApp hattımızdan motorunuzun durumunu belirterek bizimle iletişime geçebilirsiniz.</p>
+                </details>
             </div>
         </div>
     </section>
