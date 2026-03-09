@@ -54,7 +54,12 @@
         .truth-alert h3 { color: var(--alert-red); display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 
         /* ÜRÜN VİTRİNİ (RESİMLİ) */
+        .products { background-color: transparent; }
         .products h2 { text-align: center; color: var(--primary-blue); margin-bottom: 40px; font-size: 2.2rem; }
+        
+        /* YENİ ÜRÜNLER ALANI ARKA PLAN */
+        .all-products-section { background-color: #eaeaea; } 
+
         .product-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -78,7 +83,7 @@
         .p-title { font-size: 1.3rem; margin-bottom: 10px; color: var(--primary-blue); font-weight: 800; }
         .p-desc { font-size: 0.9rem; color: #666; margin-bottom: 15px; min-height: 40px; }
         .stock-status { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; }
-        .btn-view { display: block; width: 100%; background: var(--primary-blue); color: white; text-align: center; padding: 10px; border-radius: 5px; font-weight: bold; }
+        .btn-view { display: block; width: 100%; background: var(--primary-blue); color: white; text-align: center; padding: 10px; border-radius: 5px; font-weight: bold; border:none; cursor:pointer; }
 
         /* MODAL (DETAY PENCERESİ) */
         #product-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; overflow-y: auto; backdrop-filter: blur(5px); }
@@ -96,10 +101,10 @@
         .modal-title { color: var(--primary-blue); font-size: 1.8rem; margin-bottom: 15px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         .modal-desc { font-size: 1rem; color: #444; line-height: 1.6; margin-bottom: 20px; }
         
-        .modal-actions { display: flex; gap: 10px; }
-        .btn-modal-wp { flex: 2; background: var(--whatsapp-green); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
-        .btn-modal-call { flex: 1; background: var(--primary-blue); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
-        .btn-modal-link { flex: 1; background: #ff9800; color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; } /* Yeni Link Butonu Stili */
+        .modal-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+        .btn-modal-wp { flex: 1; min-width: 140px; background: var(--whatsapp-green); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-modal-call { flex: 1; min-width: 100px; background: var(--primary-blue); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-modal-link { flex: 1; min-width: 140px; background: #ff9800; color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
 
         /* HİZMETLER */
         .services { background: white; text-align: center; }
@@ -153,7 +158,6 @@
             .modal-body { flex-direction: column; }
             .modal-img-box { height: 250px; }
             .top-bar .container { justify-content: center; gap: 10px; }
-            .modal-actions { flex-direction: column; } /* Mobilde butonlar alt alta daha şık durur */
         }
     </style>
 </head>
@@ -205,7 +209,7 @@
                 </div>
                 <div class="about-text">
                     <h2>BİZ KİMİZ?</h2>
-                    <p>Ankara Ostim'de kurulan <strong>Cihat Hyundai</strong>, yılların getirdiği sektörel tecrübe ile Hyundai Accent Era dizel motorları başta olmak üzere, çıkma ve rektifiyeli motor satışında Türkiye'nin güvenilir merkezlerinden biridir.</p>
+                    <p>Ankara Ostim'de kurulan <strong>Cihat Hyundai</strong>, sektörel tecrübe ile Hyundai Accent Era dizel motorları başta olmak üzere, çıkma ve rektifiyeli motor satışında Türkiye'nin güvenilir merkezlerinden biridir.</p>
                     <p>Amacımız, müşterilerimize şeffaf ve dürüst bir hizmet sunmaktır. Alanında uzman ekibimizle, aracınızın kalbini yeniliyor ve performansını ilk günkü seviyesine taşıyoruz.</p>
                     <ul class="about-list">
                         <li><i class="fas fa-check-circle"></i> Sektörde Uzman Kadro ve Profesyonel İşçilik</li>
@@ -221,6 +225,14 @@
         <div class="container">
             <h2>VİTRİN İLANLARI</h2>
             <div id="vitrin-grid" class="product-grid">
+                </div>
+        </div>
+    </section>
+
+    <section class="section-padding products all-products-section">
+        <div class="container">
+            <h2>TÜM ÜRÜNLERİMİZ</h2>
+            <div id="all-products-grid" class="product-grid">
                 </div>
         </div>
     </section>
@@ -242,7 +254,7 @@
                     <div class="modal-actions">
                         <a id="m-wp" href="#" target="_blank" class="btn-modal-wp"><i class="fab fa-whatsapp"></i> Fiyat Al & Sipariş</a>
                         <a href="tel:05537383806" class="btn-modal-call"><i class="fas fa-phone"></i> Ara</a>
-                        <a id="m-link" href="#" target="_blank" class="btn-modal-link"><i class="fas fa-external-link-alt"></i> Ürüne Git</a>
+                        <a id="m-link" href="#" target="_blank" class="btn-modal-link" style="display: none;"><i class="fas fa-external-link-alt"></i> Ürüne Git</a>
                     </div>
                 </div>
             </div>
@@ -370,68 +382,90 @@
     </a>
 
     <script>
-        // --- 1. ÜRÜN VERİTABANI (GERÇEK FOTOĞRAF İSİMLERİ VE LİNKLER) ---
+        // --- 1. VİTRİN ÜRÜNLERİ (LİNKSİZ, ORİJİNAL) ---
         const products = [
             {
                 id: 1,
                 title: "ERA DİZEL MOTOR",
                 short: "Standart, temiz ve sorunsuz 1.5 CRDi motor.",
                 desc: "Hyundai Accent Era 1.5 Dizel Rektifiyeli Motor Seçenekleri. Tüm Türkiye'ye Hızlı Gönderim ve Tecrübe Güvencesi. Hyundai Accent Era 1.5 dizel araçlarınız için yüksek performanslı ve uzun ömürlü rektifiyeli motor çözümleri sunuyoruz. Sektördeki tecrübemizle, aracınızın kalbini yeniliyor ve güvenle yola devam etmenizi sağlıyoruz. İhtiyacınız olan rektifiyeli dizel motorlar, uzman ekibimiz tarafından özenle toplanmış ve kullanıma hazır hale getirilmiştir. Accent Era 1.5 CRDi motor arayışınızda, bütçenize uygun ve güvenilir çözümler için doğru adrestesiniz. Geniş Hizmet Ağı: Türkiye'nin Her Yerine Motor Teslimatı. Merkezimiz Ostim, Ankara'da bulunmakla birlikte, Türkiye'nin dört bir yanına sorunsuz ve güvenli kargo ile gönderim yapmaktayız. Aracınızın nerede arıza yaptığı veya sizin nerede olduğunuz fark etmeksizin, ihtiyacınız olan rektifiyeli motoru en kısa sürede size ulaştırıyoruz. Hizmet verdiğimiz ve sıkça gönderim yaptığımız başlıca iller: Marmara Bölgesi: İstanbul, Bursa, Kocaeli, Sakarya, Balıkesir, Tekirdağ. İç Anadolu Bölgesi: Ankara (Ostim, Şaşmaz, İvedik), Konya, Kayseri, Eskişehir, Sivas. Ege Bölgesi: İzmir, Manisa, Aydın, Denizli, Muğla. Akdeniz Bölgesi: Antalya, Adana, Mersin, Hatay. Karadeniz, Doğu ve Güneydoğu Anadolu: Trabzon, Samsun, Gaziantep, Şanlıurfa, Diyarbakır, Erzurum. Hangi şehirde olursanız olun, Accent Era 1.5 dizel rektifiyeli motor ihtiyaçlarınız için hızlı kargo ve teslimat avantajından yararlanabilirsiniz. Neden Bizi Tercih Etmelisiniz? Köklü Deneyim: Sektörde tecrübe ve bilgi birikimi. Hızlı ve Güvenli Teslimat: Türkiye'nin 81 iline profesyonel kargo ağı. Geniş Stok: Ankara Ostim merkezli depomuzda sürekli güncellenen motor ve parça stoğu. Şeffaf Hizmet: Müşteri memnuniyeti odaklı, dürüst ve güvenilir ticaret anlayışı. İletişim ve Sipariş Bilgilerimiz: Tel: 0553 738 38 06 - 0534 844 18 61 Hyundai Accent Era 1.5 CRDi dizel motor, standartlara uygun olarak test edilmiştir. Üfleme, yağ yakma gibi sorunları yoktur. Aracınızın performansını fabrika ayarlarına döndürmek için idealdir.",
-                image: "era-dizel-motor.jpg",
-                link: "https://cihathyundai.com.tr/urun/era-dizel-motor"
+                image: "era-dizel-motor.jpg"
             },
             {
                 id: 2,
                 title: "ERA DİZEL REKTİFİYELİ MOTOR",
                 short: "Fabrika standartlarında yenilenmiş A kalite.",
                 desc: "Bu motor, uzman ekibimiz tarafından tamamen sökülerek rektifiye işlemine tabi tutulmuştur. Piston, segman, yatak ve conta takımları sıfırlanmıştır. Sıfır ayarında motor arayanlar için en güvenli seçenektir.",
-                image: "era-dizel-motor-rektifiyeli-sifirlanmis.jpeg",
-                link: "https://cihathyundai.com.tr/urun/era-dizel-rektifiyeli-motor"
+                image: "era-dizel-motor-rektifiyeli-sifirlanmis.jpeg"
             },
             {
                 id: 3,
                 title: "ERA DİZEL REVİZYONLU MOTOR",
                 short: "Gerekli parçaları yenilenmiş ekonomik çözüm.",
                 desc: "Revizyonlu motorlarımızda, aşınmış olan parçalar tespit edilerek değiştirilmiştir. Hem bütçe dostu hem de uzun ömürlü bir kullanım sunar.",
-                image: "accent-era-dizel-motor-rektifiyeli.jpeg",
-                link: "https://cihathyundai.com.tr/urun/era-dizel-revizyonlu-motor"
+                image: "accent-era-dizel-motor-rektifiyeli.jpeg"
             },
             {
                 id: 4,
                 title: "ERA DİZEL ÇIKMA MOTOR",
                 short: "Kazalı araçtan sökülmüş, orijinal açılmamış.",
                 desc: "Hyundai Accent Era 1.5 dizel çıkma motor arayan müşterilerimiz için, doğrudan kazalı araçtan özenle sökülmüş, orijinal ve hiç açılmamış durumdaki motorumuz stoklarımızda satışa sunulmuştur; sektördeki tecrübemizle Cihat Hyundai güvencesi altında sağladığımız bu ürün, aracınızın performansını ilk günkü seviyesine taşımak için en ideal seçenektir ve Ankara Ostim merkezli işletmemizden İstanbul, İzmir, Bursa, Antalya, Konya ve Adana gibi şehirler başta olmak üzere Türkiye'nin 81 iline hızlı ve güvenli kargo avantajıyla gönderim yapmaktayız. Aracınızın motor ihtiyacını güvenle karşılamak, güncel stok durumunu teyit etmek veya hemen sipariş oluşturmak için 0553 738 38 06 veya 0534 844 18 61 numaralı telefonlarımızdan uzman ekibimizle doğrudan iletişime geçebilir, firmamızı Serhat Mah. 1126. Cad. Ayyıldız Sanayi Sitesi No: 14/A Ostim / Ankara adresinde bizzat ziyaret edebilir ve diğer tüm yedek parça ihtiyaçlarınız için www.eradizelmotor.com.tr ile www.cihathyundai.com.tr web sitelerimizi dilediğiniz zaman inceleyebilirsiniz.Hyundai Accent Era orjinal çıkma motor. Düşük kilometreli, kazalı araçlardan özenle sökülmüştür. Motor bloğu veya kapağı kesinlikle işlem görmemiştir.",
-                image: "accent-era-dizel-cikma-motor.jpeg",
-                link: "https://cihathyundai.com.tr/urun/era-dizel-cikma-motor"
+                image: "accent-era-dizel-cikma-motor.jpeg"
             },
             {
                 id: 5,
                 title: "ERA DİZEL KOMPLE MOTOR",
                 short: "Turbo, enjektör ve pompa dahil dolu motor.",
                 desc: "Hyundai Accent Era 1.5 dizel komple dolu motor arayan müşterilerimiz için turbo, enjektör ve yakıt pompası üzerinde montajlı, tam takım olarak hazır bulunan motorumuz stoklarımızda satışa sunulmuştur; sektördeki tecrübemizle Cihat Hyundai güvencesi altında sağladığımız bu komple motor seçeneği, aracınızın performansını en üst seviyeye taşımak için eksiksiz bir çözüm sunmaktadır ve Ankara Ostim merkezli işletmemizden İstanbul, İzmir, Bursa, Antalya, Konya, Adana, Samsun, Trabzon, Diyarbakır ve Gaziantep gibi şehirler başta olmak üzere Türkiye'nin 81 iline hızlı ve güvenli kargo avantajıyla gönderim yapmaktayız. Aracınızın dolu motor ihtiyacını eksiksiz şekilde karşılamak, güncel fiyat ile stok durumunu anında teyit etmek veya hızlıca sipariş oluşturmak için 0553 738 38 06 veya 0534 844 18 61 numaralı telefonlarımızdan uzman yedek parça ekibimizle doğrudan iletişime geçebilir, işletmemizi Serhat Mah. 1126. Cad. No: 14 Ostim / Ankara adresinde bizzat ziyaret edebilir ve Hyundai Accent Era dizel motor seçeneklerimiz ile diğer tüm yedek parça ihtiyaçlarınız için www.eradizelmotor.com.tr ile www.cihathyundai.com.tr web sitelerimizi dilediğiniz zaman detaylıca inceleyebilirsiniz.Sadece blok ve kapak değil; üzerinde turbosu, mazot pompası, enjektörleri bulunan dolu motordur. Tak-çalıştır mantığındadır.",
-                image: "era-dizel-komple-cikma-motorlar.jpeg",
-                link: "https://cihathyundai.com.tr/urun/era-dizel-komple-motor"
+                image: "era-dizel-komple-cikma-motorlar.jpeg"
             },
             {
                 id: 6,
                 title: "ERA DİZEL YARIM MOTOR",
                 short: "Sadece alt blok (Short Block).",
                 desc: "Silindir kapağınız sağlamsa ancak alt blokta yatak sarma veya blok patlatma gibi sorunlar yaşadıysanız, yarım motor (short block) en ekonomik çözümdür.",
-                image: "era-yarim.jpg",
-                link: "https://cihathyundai.com.tr/urun/era-dizel-yarim-motor"
+                image: "era-yarim.jpg"
             }
         ];
 
-        // --- 2. SİSTEM ÇALIŞTIRMA ---
-        function renderProducts() {
+        // --- 2. YENİ EKLENEN TÜM ÜRÜNLER (LİNKLİ) ---
+        const allProductsList = [
+            {
+                id: 101, // ID'ler vitrin ürünleriyle karışmaması için farklı başlatıldı
+                title: "ERA DİZEL SİLİNDİR KAPAĞI",
+                short: "Sorunsuz, test edilmiş dolu silindir kapağı.",
+                desc: "Accent Era 1.5 CRDi motorlar için kullanıma hazır dolu silindir kapağı. Detaylı bilgi ve sipariş için ulaşabilirsiniz.",
+                image: "era-silindir-kapagi.jpg",
+                link: "https://eradizelmotor.com.tr/urun/era-dizel-silindir-kapagi"
+            },
+            {
+                id: 102,
+                title: "ERA DİZEL BLOK",
+                short: "Çatlaksız, standart ölçü motor bloğı.",
+                desc: "Hyundai Accent Era 1.5 dizel orijinal motor bloğu. Çatlak testi yapılmış ve kullanıma uygundur.",
+                image: "era-motor-blogu.jpg",
+                link: "https://eradizelmotor.com.tr/urun/era-dizel-motor-blogu"
+            },
+            {
+                id: 103,
+                title: "ERA DİZEL KRANK",
+                short: "Standart ölçülerde orijinal krank mili.",
+                desc: "Accent Era 1.5 dizel motorlar için temiz ve standart ölçülerde çıkma krank mili.",
+                image: "era-krank-mili.jpg",
+                link: "https://eradizelmotor.com.tr/urun/era-dizel-krank-mili"
+            }
+        ];
+
+        // --- 3. SİSTEM ÇALIŞTIRMA ---
+        
+        // Vitrin ürünlerini ekrana bas
+        function renderVitrinProducts() {
             const grid = document.getElementById('vitrin-grid');
             if(!grid) return; 
             grid.innerHTML = "";
 
             products.forEach(p => {
-                // Resim yoksa placeholder koy
                 const imgSrc = p.image ? p.image : 'https://via.placeholder.com/400x300?text=Resim+Yok';
-                
                 const html = `
                     <div class="product-card" onclick="openModal(${p.id})">
                         <div class="p-img">
@@ -449,8 +483,38 @@
             });
         }
 
+        // Yeni eklenen tüm ürünleri ekrana bas
+        function renderAllProducts() {
+            const grid = document.getElementById('all-products-grid');
+            if(!grid) return; 
+            grid.innerHTML = "";
+
+            allProductsList.forEach(p => {
+                const imgSrc = p.image ? p.image : 'https://via.placeholder.com/400x300?text=Resim+Yok';
+                const html = `
+                    <div class="product-card" onclick="openModal(${p.id})">
+                        <div class="p-img">
+                            <img src="${imgSrc}" alt="${p.title}" onerror="this.src='https://via.placeholder.com/400x300?text=Resim+Yuklenmedi'">
+                        </div>
+                        <div class="p-content">
+                            <div class="stock-status">STOKTA VAR</div>
+                            <h3 class="p-title">${p.title}</h3>
+                            <p class="p-desc">${p.short}</p>
+                            <button class="btn-view">İNCELE & FİYAT AL</button>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += html;
+            });
+        }
+
+        // Modalı açan ortak fonksiyon
         function openModal(id) {
-            const p = products.find(i => i.id === id);
+            // Tıklanan ürünün hangi listede olduğunu bul
+            let p = products.find(i => i.id === id);
+            if (!p) {
+                p = allProductsList.find(i => i.id === id);
+            }
             if (!p) return;
 
             document.getElementById('m-title').innerText = p.title;
@@ -464,8 +528,14 @@
             const msg = `Merhaba, "${p.title}" hakkında fiyat almak istiyorum.`;
             document.getElementById('m-wp').href = `https://wa.me/905537383806?text=${encodeURIComponent(msg)}`;
             
-            // Yeni Eklenen: Ürün Linki
-            document.getElementById('m-link').href = p.link;
+            // Eğer ürünün link özelliği varsa (yeni eklenen ürünler bölümündeyse) butonu göster
+            const linkBtn = document.getElementById('m-link');
+            if(p.link) {
+                linkBtn.href = p.link;
+                linkBtn.style.display = 'flex';
+            } else {
+                linkBtn.style.display = 'none';
+            }
 
             document.getElementById('product-modal').style.display = 'block';
             document.body.style.overflow = 'hidden';
@@ -482,7 +552,8 @@
 
         // Sayfa tam yüklenince çalıştır
         window.addEventListener('DOMContentLoaded', (event) => {
-            renderProducts();
+            renderVitrinProducts();
+            renderAllProducts();
         });
     </script>
 </body>
