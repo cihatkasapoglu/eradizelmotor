@@ -99,6 +99,7 @@
         .modal-actions { display: flex; gap: 10px; }
         .btn-modal-wp { flex: 2; background: var(--whatsapp-green); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
         .btn-modal-call { flex: 1; background: var(--primary-blue); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-modal-link { flex: 1; background: #ff9800; color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; } /* Yeni Link Butonu Stili */
 
         /* HİZMETLER */
         .services { background: white; text-align: center; }
@@ -152,6 +153,7 @@
             .modal-body { flex-direction: column; }
             .modal-img-box { height: 250px; }
             .top-bar .container { justify-content: center; gap: 10px; }
+            .modal-actions { flex-direction: column; } /* Mobilde butonlar alt alta daha şık durur */
         }
     </style>
 </head>
@@ -203,7 +205,7 @@
                 </div>
                 <div class="about-text">
                     <h2>BİZ KİMİZ?</h2>
-                    <p>Ankara Yenimahalle'de kurulan <strong>Cihat Hyundai</strong>, yılların getirdiği sektörel tecrübe ile Hyundai Accent Era dizel motorları başta olmak üzere, çıkma ve rektifiyeli motor satışında Türkiye'nin güvenilir merkezlerinden biridir.</p>
+                    <p>Ankara Ostim'de kurulan <strong>Cihat Hyundai</strong>, yılların getirdiği sektörel tecrübe ile Hyundai Accent Era dizel motorları başta olmak üzere, çıkma ve rektifiyeli motor satışında Türkiye'nin güvenilir merkezlerinden biridir.</p>
                     <p>Amacımız, müşterilerimize şeffaf ve dürüst bir hizmet sunmaktır. Alanında uzman ekibimizle, aracınızın kalbini yeniliyor ve performansını ilk günkü seviyesine taşıyoruz.</p>
                     <ul class="about-list">
                         <li><i class="fas fa-check-circle"></i> Sektörde Uzman Kadro ve Profesyonel İşçilik</li>
@@ -240,6 +242,7 @@
                     <div class="modal-actions">
                         <a id="m-wp" href="#" target="_blank" class="btn-modal-wp"><i class="fab fa-whatsapp"></i> Fiyat Al & Sipariş</a>
                         <a href="tel:05537383806" class="btn-modal-call"><i class="fas fa-phone"></i> Ara</a>
+                        <a id="m-link" href="#" target="_blank" class="btn-modal-link"><i class="fas fa-external-link-alt"></i> Ürüne Git</a>
                     </div>
                 </div>
             </div>
@@ -278,7 +281,7 @@
                 </details>
                 <details class="faq-item">
                     <summary><i class="fas fa-question-circle" style="margin-right: 10px;"></i> Şehir dışındayım, kargo gönderiminiz var mı?</summary>
-                    <p>Kesinlikle. Ankara Yenimahalle merkezli depomuzdan, anlaşmalı olduğumuz kargo firmaları aracılığıyla Türkiye'nin 81 iline hızlı ve güvenli gönderim sağlamaktayız.</p>
+                    <p>Kesinlikle. Ankara Ostim merkezli depomuzdan, anlaşmalı olduğumuz kargo firmaları aracılığıyla Türkiye'nin 81 iline hızlı ve güvenli gönderim sağlamaktayız.</p>
                 </details>
                 <details class="faq-item">
                     <summary><i class="fas fa-question-circle" style="margin-right: 10px;"></i> Rektifiyeli motor ile çıkma motor arasındaki fark nedir?</summary>
@@ -295,7 +298,7 @@
     <section class="section-padding seo-text-area">
         <div class="container">
             <h2 style="margin-bottom:15px; color:#333;">Hyundai Era Dizel Motor Çözümleri</h2>
-            <p>Hyundai Accent Era araçlar, Türkiye'nin en çok tercih edilen ticari ve binek araçları arasında yer almaktadır. Özellikle 1.5 CRDi VGT motorlar, performans ve yakıt ekonomisi ile bilinir. Ancak zamanla yüksek kilometreye bağlı olarak motor yenileme ihtiyacı doğabilir. <strong>Cihat Hyundai</strong> olarak, Ankara Yenimahalle'deki merkezimizden tüm Türkiye'ye garantili, test edilmiş <strong>Era dizel motor</strong> tedariği sağlıyoruz.</p>
+            <p>Hyundai Accent Era araçlar, Türkiye'nin en çok tercih edilen ticari ve binek araçları arasında yer almaktadır. Özellikle 1.5 CRDi VGT motorlar, performans ve yakıt ekonomisi ile bilinir. Ancak zamanla yüksek kilometreye bağlı olarak motor yenileme ihtiyacı doğabilir. <strong>Cihat Hyundai</strong> olarak, Ankara Ostim'deki merkezimizden tüm Türkiye'ye garantili, test edilmiş <strong>Era dizel motor</strong> tedariği sağlıyoruz.</p>
             <br>
             <h3 style="margin-bottom:10px; color:#333;">Neden Rektifiyeli veya Çıkma Motor?</h3>
             <p>Temiz motor arayanların tercihi olmaya devam ediyoruz. Rektifiyeli motorda ilk adresiniz Cihat Hyundai. Yarım motor, komple motor veya sadece silindir kapak ihtiyaçlarınızda en doğru parça tespiti için şase numaranızla bize ulaşabilirsiniz.</p>
@@ -344,7 +347,7 @@
                 </div>
                 <div>
                     <h3>İletişim</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Serhat Mah. 1126. Cad. No:14 Yenimahalle/Ankara</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Serhat Mah. 1126. Cad. No: 14 Ostim/Ankara</p>
                     <p><i class="fas fa-phone"></i> 0553 738 38 06</p>
                     <p><i class="fas fa-phone"></i> 0534 844 18 61</p>
                 </div>
@@ -367,49 +370,55 @@
     </a>
 
     <script>
-        // --- 1. ÜRÜN VERİTABANI (GERÇEK FOTOĞRAF İSİMLERİ) ---
+        // --- 1. ÜRÜN VERİTABANI (GERÇEK FOTOĞRAF İSİMLERİ VE LİNKLER) ---
         const products = [
             {
                 id: 1,
                 title: "ERA DİZEL MOTOR",
                 short: "Standart, temiz ve sorunsuz 1.5 CRDi motor.",
-                desc: "Hyundai Accent Era 1.5 Dizel Rektifiyeli Motor Seçenekleri. Tüm Türkiye'ye Hızlı Gönderim ve Tecrübe Güvencesi. Hyundai Accent Era 1.5 dizel araçlarınız için yüksek performanslı ve uzun ömürlü rektifiyeli motor çözümleri sunuyoruz. Sektördeki 20 yıllık tecrübemizle, aracınızın kalbini yeniliyor ve güvenle yola devam etmenizi sağlıyoruz. İhtiyacınız olan rektifiyeli dizel motorlar, uzman ekibimiz tarafından özenle toplanmış ve kullanıma hazır hale getirilmiştir. Accent Era 1.5 CRDi motor arayışınızda, bütçenize uygun ve güvenilir çözümler için doğru adrestesiniz. Geniş Hizmet Ağı: Türkiye'nin Her Yerine Motor Teslimatı. Merkezimiz Ostim, Ankara'da bulunmakla birlikte, Türkiye'nin dört bir yanına sorunsuz ve güvenli kargo ile gönderim yapmaktayız. Aracınızın nerede arıza yaptığı veya sizin nerede olduğunuz fark etmeksizin, ihtiyacınız olan rektifiyeli motoru en kısa sürede size ulaştırıyoruz. Hizmet verdiğimiz ve sıkça gönderim yaptığımız başlıca iller: Marmara Bölgesi: İstanbul, Bursa, Kocaeli, Sakarya, Balıkesir, Tekirdağ. İç Anadolu Bölgesi: Ankara (Ostim, Şaşmaz, İvedik), Konya, Kayseri, Eskişehir, Sivas. Ege Bölgesi: İzmir, Manisa, Aydın, Denizli, Muğla. Akdeniz Bölgesi: Antalya, Adana, Mersin, Hatay. Karadeniz, Doğu ve Güneydoğu Anadolu: Trabzon, Samsun, Gaziantep, Şanlıurfa, Diyarbakır, Erzurum. Hangi şehirde olursanız olun, Accent Era 1.5 dizel rektifiyeli motor ihtiyaçlarınız için hızlı kargo ve teslimat avantajından yararlanabilirsiniz. Neden Bizi Tercih Etmelisiniz? Köklü Deneyim: Sektörde tam 20 yıllık tecrübe ve bilgi birikimi. Hızlı ve Güvenli Teslimat: Türkiye'nin 81 iline profesyonel kargo ağı. Geniş Stok: Ankara Ostim merkezli depomuzda sürekli güncellenen motor ve parça stoğu. Şeffaf Hizmet: Müşteri memnuniyeti odaklı, dürüst ve güvenilir ticaret anlayışı. İletişim ve Sipariş Bilgilerimiz: Tel: 0553 738 38 06 - 0534 844 18 61 Hyundai Accent Era 1.5 CRDi dizel motor, standartlara uygun olarak test edilmiştir. Üfleme, yağ yakma gibi sorunları yoktur. Aracınızın performansını fabrika ayarlarına döndürmek için idealdir.",
-                image: "era-dizel-motor.jpg"
+                desc: "Hyundai Accent Era 1.5 Dizel Rektifiyeli Motor Seçenekleri. Tüm Türkiye'ye Hızlı Gönderim ve Tecrübe Güvencesi. Hyundai Accent Era 1.5 dizel araçlarınız için yüksek performanslı ve uzun ömürlü rektifiyeli motor çözümleri sunuyoruz. Sektördeki tecrübemizle, aracınızın kalbini yeniliyor ve güvenle yola devam etmenizi sağlıyoruz. İhtiyacınız olan rektifiyeli dizel motorlar, uzman ekibimiz tarafından özenle toplanmış ve kullanıma hazır hale getirilmiştir. Accent Era 1.5 CRDi motor arayışınızda, bütçenize uygun ve güvenilir çözümler için doğru adrestesiniz. Geniş Hizmet Ağı: Türkiye'nin Her Yerine Motor Teslimatı. Merkezimiz Ostim, Ankara'da bulunmakla birlikte, Türkiye'nin dört bir yanına sorunsuz ve güvenli kargo ile gönderim yapmaktayız. Aracınızın nerede arıza yaptığı veya sizin nerede olduğunuz fark etmeksizin, ihtiyacınız olan rektifiyeli motoru en kısa sürede size ulaştırıyoruz. Hizmet verdiğimiz ve sıkça gönderim yaptığımız başlıca iller: Marmara Bölgesi: İstanbul, Bursa, Kocaeli, Sakarya, Balıkesir, Tekirdağ. İç Anadolu Bölgesi: Ankara (Ostim, Şaşmaz, İvedik), Konya, Kayseri, Eskişehir, Sivas. Ege Bölgesi: İzmir, Manisa, Aydın, Denizli, Muğla. Akdeniz Bölgesi: Antalya, Adana, Mersin, Hatay. Karadeniz, Doğu ve Güneydoğu Anadolu: Trabzon, Samsun, Gaziantep, Şanlıurfa, Diyarbakır, Erzurum. Hangi şehirde olursanız olun, Accent Era 1.5 dizel rektifiyeli motor ihtiyaçlarınız için hızlı kargo ve teslimat avantajından yararlanabilirsiniz. Neden Bizi Tercih Etmelisiniz? Köklü Deneyim: Sektörde tecrübe ve bilgi birikimi. Hızlı ve Güvenli Teslimat: Türkiye'nin 81 iline profesyonel kargo ağı. Geniş Stok: Ankara Ostim merkezli depomuzda sürekli güncellenen motor ve parça stoğu. Şeffaf Hizmet: Müşteri memnuniyeti odaklı, dürüst ve güvenilir ticaret anlayışı. İletişim ve Sipariş Bilgilerimiz: Tel: 0553 738 38 06 - 0534 844 18 61 Hyundai Accent Era 1.5 CRDi dizel motor, standartlara uygun olarak test edilmiştir. Üfleme, yağ yakma gibi sorunları yoktur. Aracınızın performansını fabrika ayarlarına döndürmek için idealdir.",
+                image: "era-dizel-motor.jpg",
+                link: "https://cihathyundai.com.tr/urun/era-dizel-motor"
             },
             {
                 id: 2,
                 title: "ERA DİZEL REKTİFİYELİ MOTOR",
                 short: "Fabrika standartlarında yenilenmiş A kalite.",
                 desc: "Bu motor, uzman ekibimiz tarafından tamamen sökülerek rektifiye işlemine tabi tutulmuştur. Piston, segman, yatak ve conta takımları sıfırlanmıştır. Sıfır ayarında motor arayanlar için en güvenli seçenektir.",
-                image: "era-dizel-motor-rektifiyeli-sifirlanmis.jpeg"
+                image: "era-dizel-motor-rektifiyeli-sifirlanmis.jpeg",
+                link: "https://cihathyundai.com.tr/urun/era-dizel-rektifiyeli-motor"
             },
             {
                 id: 3,
                 title: "ERA DİZEL REVİZYONLU MOTOR",
                 short: "Gerekli parçaları yenilenmiş ekonomik çözüm.",
                 desc: "Revizyonlu motorlarımızda, aşınmış olan parçalar tespit edilerek değiştirilmiştir. Hem bütçe dostu hem de uzun ömürlü bir kullanım sunar.",
-                image: "accent-era-dizel-motor-rektifiyeli.jpeg"
+                image: "accent-era-dizel-motor-rektifiyeli.jpeg",
+                link: "https://cihathyundai.com.tr/urun/era-dizel-revizyonlu-motor"
             },
             {
                 id: 4,
                 title: "ERA DİZEL ÇIKMA MOTOR",
                 short: "Kazalı araçtan sökülmüş, orijinal açılmamış.",
                 desc: "Hyundai Accent Era 1.5 dizel çıkma motor arayan müşterilerimiz için, doğrudan kazalı araçtan özenle sökülmüş, orijinal ve hiç açılmamış durumdaki motorumuz stoklarımızda satışa sunulmuştur; sektördeki tecrübemizle Cihat Hyundai güvencesi altında sağladığımız bu ürün, aracınızın performansını ilk günkü seviyesine taşımak için en ideal seçenektir ve Ankara Ostim merkezli işletmemizden İstanbul, İzmir, Bursa, Antalya, Konya ve Adana gibi şehirler başta olmak üzere Türkiye'nin 81 iline hızlı ve güvenli kargo avantajıyla gönderim yapmaktayız. Aracınızın motor ihtiyacını güvenle karşılamak, güncel stok durumunu teyit etmek veya hemen sipariş oluşturmak için 0553 738 38 06 veya 0534 844 18 61 numaralı telefonlarımızdan uzman ekibimizle doğrudan iletişime geçebilir, firmamızı Serhat Mah. 1126. Cad. Ayyıldız Sanayi Sitesi No: 14/A Ostim / Ankara adresinde bizzat ziyaret edebilir ve diğer tüm yedek parça ihtiyaçlarınız için www.eradizelmotor.com.tr ile www.cihathyundai.com.tr web sitelerimizi dilediğiniz zaman inceleyebilirsiniz.Hyundai Accent Era orjinal çıkma motor. Düşük kilometreli, kazalı araçlardan özenle sökülmüştür. Motor bloğu veya kapağı kesinlikle işlem görmemiştir.",
-                image: "accent-era-dizel-cikma-motor.jpeg"
+                image: "accent-era-dizel-cikma-motor.jpeg",
+                link: "https://cihathyundai.com.tr/urun/era-dizel-cikma-motor"
             },
             {
                 id: 5,
                 title: "ERA DİZEL KOMPLE MOTOR",
                 short: "Turbo, enjektör ve pompa dahil dolu motor.",
                 desc: "Hyundai Accent Era 1.5 dizel komple dolu motor arayan müşterilerimiz için turbo, enjektör ve yakıt pompası üzerinde montajlı, tam takım olarak hazır bulunan motorumuz stoklarımızda satışa sunulmuştur; sektördeki tecrübemizle Cihat Hyundai güvencesi altında sağladığımız bu komple motor seçeneği, aracınızın performansını en üst seviyeye taşımak için eksiksiz bir çözüm sunmaktadır ve Ankara Ostim merkezli işletmemizden İstanbul, İzmir, Bursa, Antalya, Konya, Adana, Samsun, Trabzon, Diyarbakır ve Gaziantep gibi şehirler başta olmak üzere Türkiye'nin 81 iline hızlı ve güvenli kargo avantajıyla gönderim yapmaktayız. Aracınızın dolu motor ihtiyacını eksiksiz şekilde karşılamak, güncel fiyat ile stok durumunu anında teyit etmek veya hızlıca sipariş oluşturmak için 0553 738 38 06 veya 0534 844 18 61 numaralı telefonlarımızdan uzman yedek parça ekibimizle doğrudan iletişime geçebilir, işletmemizi Serhat Mah. 1126. Cad. No: 14 Ostim / Ankara adresinde bizzat ziyaret edebilir ve Hyundai Accent Era dizel motor seçeneklerimiz ile diğer tüm yedek parça ihtiyaçlarınız için www.eradizelmotor.com.tr ile www.cihathyundai.com.tr web sitelerimizi dilediğiniz zaman detaylıca inceleyebilirsiniz.Sadece blok ve kapak değil; üzerinde turbosu, mazot pompası, enjektörleri bulunan dolu motordur. Tak-çalıştır mantığındadır.",
-                image: "era-dizel-komple-cikma-motorlar.jpeg"
+                image: "era-dizel-komple-cikma-motorlar.jpeg",
+                link: "https://cihathyundai.com.tr/urun/era-dizel-komple-motor"
             },
             {
                 id: 6,
                 title: "ERA DİZEL YARIM MOTOR",
                 short: "Sadece alt blok (Short Block).",
                 desc: "Silindir kapağınız sağlamsa ancak alt blokta yatak sarma veya blok patlatma gibi sorunlar yaşadıysanız, yarım motor (short block) en ekonomik çözümdür.",
-                image: "era-yarim.jpg"
+                image: "era-yarim.jpg",
+                link: "https://cihathyundai.com.tr/urun/era-dizel-yarim-motor"
             }
         ];
 
@@ -454,6 +463,9 @@
 
             const msg = `Merhaba, "${p.title}" hakkında fiyat almak istiyorum.`;
             document.getElementById('m-wp').href = `https://wa.me/905537383806?text=${encodeURIComponent(msg)}`;
+            
+            // Yeni Eklenen: Ürün Linki
+            document.getElementById('m-link').href = p.link;
 
             document.getElementById('product-modal').style.display = 'block';
             document.body.style.overflow = 'hidden';
