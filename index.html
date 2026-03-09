@@ -65,10 +65,12 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 30px; 
         }
+        
+        /* HEM DIV HEM A OLARAK KULLANILAN KARTLAR İÇİN */
         .product-card { 
             background: white; border-radius: 10px; overflow: hidden; 
             box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; 
-            cursor: pointer; transition: 0.3s; 
+            cursor: pointer; transition: 0.3s; display: block; color: inherit;
         }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
         
@@ -104,7 +106,6 @@
         .modal-actions { display: flex; gap: 10px; flex-wrap: wrap; }
         .btn-modal-wp { flex: 1; min-width: 140px; background: var(--whatsapp-green); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
         .btn-modal-call { flex: 1; min-width: 100px; background: var(--primary-blue); color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
-        .btn-modal-link { flex: 1; min-width: 140px; background: #ff9800; color: white; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
 
         /* HİZMETLER */
         .services { background: white; text-align: center; }
@@ -254,7 +255,6 @@
                     <div class="modal-actions">
                         <a id="m-wp" href="#" target="_blank" class="btn-modal-wp"><i class="fab fa-whatsapp"></i> Fiyat Al & Sipariş</a>
                         <a href="tel:05537383806" class="btn-modal-call"><i class="fas fa-phone"></i> Ara</a>
-                        <a id="m-link" href="#" target="_blank" class="btn-modal-link" style="display: none;"><i class="fas fa-external-link-alt"></i> Ürüne Git</a>
                     </div>
                 </div>
             </div>
@@ -382,7 +382,7 @@
     </a>
 
     <script>
-        // --- 1. VİTRİN ÜRÜNLERİ (LİNKSİZ, ORİJİNAL) ---
+        // --- 1. VİTRİN ÜRÜNLERİ (LİNKSİZ, SADECE MODAL AÇAR) ---
         const products = [
             {
                 id: 1,
@@ -428,37 +428,34 @@
             }
         ];
 
-        // --- 2. YENİ EKLENEN TÜM ÜRÜNLER (LİNKLİ) ---
+        // --- 2. YENİ EKLENEN TÜM ÜRÜNLER (DOĞRUDAN SAYFAYA YÖNLENDİRİR) ---
         const allProductsList = [
             {
-                id: 101, // ID'ler vitrin ürünleriyle karışmaması için farklı başlatıldı
+                id: 101, 
                 title: "ERA DİZEL SİLİNDİR KAPAĞI",
                 short: "Sorunsuz, test edilmiş dolu silindir kapağı.",
-                desc: "Accent Era 1.5 CRDi motorlar için kullanıma hazır dolu silindir kapağı. Detaylı bilgi ve sipariş için ulaşabilirsiniz.",
                 image: "era-silindir-kapagi.jpg",
-                link: "https://eradizelmotor.com.tr/urun/era-dizel-silindir-kapagi"
+                link: "https://eradizelmotor.com.tr/urun/era-dizel-silindir-kapagi" // KENDİ GERÇEK LİNKİNİZİ BURAYA YAZIN
             },
             {
                 id: 102,
                 title: "ERA DİZEL BLOK",
-                short: "Çatlaksız, standart ölçü motor bloğı.",
-                desc: "Hyundai Accent Era 1.5 dizel orijinal motor bloğu. Çatlak testi yapılmış ve kullanıma uygundur.",
+                short: "Çatlaksız, standart ölçü motor bloğu.",
                 image: "era-motor-blogu.jpg",
-                link: "https://eradizelmotor.com.tr/urun/era-dizel-motor-blogu"
+                link: "https://eradizelmotor.com.tr/urun/era-dizel-motor-blogu" // KENDİ GERÇEK LİNKİNİZİ BURAYA YAZIN
             },
             {
                 id: 103,
                 title: "ERA DİZEL KRANK",
                 short: "Standart ölçülerde orijinal krank mili.",
-                desc: "Accent Era 1.5 dizel motorlar için temiz ve standart ölçülerde çıkma krank mili.",
                 image: "era-krank-mili.jpg",
-                link: "https://eradizelmotor.com.tr/urun/era-dizel-krank-mili"
+                link: "https://eradizelmotor.com.tr/urun/era-dizel-krank-mili" // KENDİ GERÇEK LİNKİNİZİ BURAYA YAZIN
             }
         ];
 
         // --- 3. SİSTEM ÇALIŞTIRMA ---
         
-        // Vitrin ürünlerini ekrana bas
+        // Vitrin ürünlerini ekrana bas (Sadece Tıklayınca Modal Açar)
         function renderVitrinProducts() {
             const grid = document.getElementById('vitrin-grid');
             if(!grid) return; 
@@ -483,7 +480,7 @@
             });
         }
 
-        // Yeni eklenen tüm ürünleri ekrana bas
+        // Yeni eklenen tüm ürünleri ekrana bas (Direkt linke gider)
         function renderAllProducts() {
             const grid = document.getElementById('all-products-grid');
             if(!grid) return; 
@@ -492,7 +489,7 @@
             allProductsList.forEach(p => {
                 const imgSrc = p.image ? p.image : 'https://via.placeholder.com/400x300?text=Resim+Yok';
                 const html = `
-                    <div class="product-card" onclick="openModal(${p.id})">
+                    <a href="${p.link}" class="product-card" style="text-decoration:none;">
                         <div class="p-img">
                             <img src="${imgSrc}" alt="${p.title}" onerror="this.src='https://via.placeholder.com/400x300?text=Resim+Yuklenmedi'">
                         </div>
@@ -500,21 +497,17 @@
                             <div class="stock-status">STOKTA VAR</div>
                             <h3 class="p-title">${p.title}</h3>
                             <p class="p-desc">${p.short}</p>
-                            <button class="btn-view">İNCELE & FİYAT AL</button>
+                            <button class="btn-view">ÜRÜNÜ İNCELE</button>
                         </div>
-                    </div>
+                    </a>
                 `;
                 grid.innerHTML += html;
             });
         }
 
-        // Modalı açan ortak fonksiyon
+        // Modalı açan fonksiyon (Artık sadece Vitrin ürünleri için çalışır)
         function openModal(id) {
-            // Tıklanan ürünün hangi listede olduğunu bul
-            let p = products.find(i => i.id === id);
-            if (!p) {
-                p = allProductsList.find(i => i.id === id);
-            }
+            const p = products.find(i => i.id === id);
             if (!p) return;
 
             document.getElementById('m-title').innerText = p.title;
@@ -527,15 +520,6 @@
 
             const msg = `Merhaba, "${p.title}" hakkında fiyat almak istiyorum.`;
             document.getElementById('m-wp').href = `https://wa.me/905537383806?text=${encodeURIComponent(msg)}`;
-            
-            // Eğer ürünün link özelliği varsa (yeni eklenen ürünler bölümündeyse) butonu göster
-            const linkBtn = document.getElementById('m-link');
-            if(p.link) {
-                linkBtn.href = p.link;
-                linkBtn.style.display = 'flex';
-            } else {
-                linkBtn.style.display = 'none';
-            }
 
             document.getElementById('product-modal').style.display = 'block';
             document.body.style.overflow = 'hidden';
